@@ -1,0 +1,15 @@
+include ../components/header/header
+include ../components/plan/plan
+
+doctype html
+html(lang=ru)
+    head
+        meta(CHARSET=UTF-8)
+        title Индекс пейдж
+
+    body
+        +plan({title: "free", price: 0})
+        +plan({title: "personal", price: 25})
+        +plan({title: "buisness", price: 50, isBuisness:true})
+        +plan({title: "ultimate", price: 99})
+        +header

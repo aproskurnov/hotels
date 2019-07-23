@@ -1,0 +1,6 @@
+mixin button(options)
+    -
+        var buttonClassName = "button"
+        buttonClassName += options.isBusiness ? " button_business" : ""
+
+    button(class=buttonClassName)= options.title
