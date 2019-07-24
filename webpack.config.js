@@ -8,7 +8,8 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, './public'),
-		filename: '[name].bundle.js'
+		filename: '[name].bundle.js',
+		publicPath: "/"
 	},
 	module: {
 		rules: [
@@ -38,6 +39,10 @@ module.exports = {
 					}
 				]
 			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				use: 'file-loader'
+			}
 
 		]
 	},
@@ -49,10 +54,10 @@ module.exports = {
 			filename: "index.html",
 			template: './pages/index.pug'
 		}),
-		new HtmlWebpackPlugin({
-			filename: "test.html",
-			template: './pages/test.pug'
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: "test.html",
+		// 	template: './pages/test.pug'
+		// }),
 	]
 };
 
