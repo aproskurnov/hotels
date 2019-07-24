@@ -54,6 +54,11 @@ module.exports = {
 			filename: "index.html",
 			template: './pages/index.pug'
 		}),
+		new HtmlWebpackPlugin({
+			filename: "ui-kit-colors-type.html",
+			template: './pages/ui-kit-colors-type.pug'
+		}),
+
 		// new HtmlWebpackPlugin({
 		// 	filename: "test.html",
 		// 	template: './pages/test.pug'

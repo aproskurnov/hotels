@@ -1,0 +1,12 @@
+mixin ui-header(options)
+    div(class="ui-header")
+        div(class="ui-header__tag")
+            if options.tag === 'body'
+                div=options.tag
+            else
+                #{options.tag}=options.tag
+        div(class="ui-header__title")
+            if options.tag === 'body'
+                div=options.title
+            else
+                #{options.tag}=options.title

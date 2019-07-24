@@ -1,0 +1,17 @@
+.ui-color{
+  display: flex;
+  padding: 10px;
+}
+
+.ui-color-text{
+  margin-left: 40px;
+  line-height: 29px;
+  &__title{
+    margin-top: 9px;
+  }
+  &__value{
+    font-size: 19px;
+    margin-top: 3px;
+    font-family: "Quicksand", sans-serif;
+  }
+}

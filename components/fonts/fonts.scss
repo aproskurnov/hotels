@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'Quicksand';
+  src:
+          url('./Quicksand-Regular.woff') format('woff'),
+          url('./Quicksand-Regular.ttf') format('truetype'),
+          url('./Quicksand-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Montserrat';
   src:
     url('./Montserrat-Regular.woff') format('woff'),

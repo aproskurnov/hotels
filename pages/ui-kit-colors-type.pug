@@ -1,0 +1,24 @@
+include ../components/ui-color/ui-color
+include ../components/ui-header/ui-header
+
+doctype html
+html(lang=ru)
+    head
+        meta(CHARSET=UTF-8)
+        title UI kit colors & pages
+
+    body
+        section(class="content")
+            div(class="content__colors")
+                +ui-color({color: "dark100", title: "Dark Shade 100%", value: "#1F2041"})
+                +ui-color({color: "dark75", title: "Dark Shade 75%", value: "#1F2041"})
+                +ui-color({color: "dark50", title: "Dark Shade 50%", value: "#1F2041"})
+                +ui-color({color: "dark25", title: "Dark Shade 25%", value: "#1F2041"})
+                +ui-color({color: "dark5", title: "Dark Shade 5%", value: "#1F2041"})
+                +ui-color({color: "purple", title: "Purple", value: "#BC9CFF"})
+                +ui-color({color: "green", title: "Green", value: "#6FCF97"})
+            div(class="content__headers")
+                +ui-header({tag: 'H1', title: 'This one is the sub-section or widget title'})
+                +ui-header({tag: 'H2', title: 'Next one is the item title inside widgets'})
+                +ui-header({tag: 'H3', title: 'This is a label or cta text'})
+                +ui-header({tag: 'Body', title: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})

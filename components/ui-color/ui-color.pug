@@ -1,0 +1,9 @@
+include ../ui-color-rect/ui-color-rect
+
+mixin ui-color(options)
+    div(class="ui-color")
+        +ui-color-rect({color: options.color})
+        div(class="ui-color-text")
+            div(class="ui-color-text__title")
+                h2=options.title
+            div(class="ui-color-text__value")=options.value

@@ -1,17 +1,11 @@
-$dark-color: #1F2041;
-$dark-100: rgba($dark-color, 1);
-$dark-75: rgba($dark-color, 0.75);
-$dark-50: rgba($dark-color, 0.50);
-$dark-25: rgba($dark-color, 0.25);
-$dark-5: rgba($dark-color, 0.05);
-$purple-color: #BC9CFF;
-$green-color: #6FCF97;
+@import "../variables/variables";
 
 body{
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: $dark-color;
+  margin: 0;
 }
 
 h3{
@@ -19,6 +13,7 @@ h3{
   font-weight: bold;
   text-transform: uppercase;
   line-height: 15px;
+  margin: 0;
 }
 
 h2{
@@ -26,6 +21,7 @@ h2{
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
+  margin: 0;
 }
 
 h1{
@@ -33,4 +29,5 @@ h1{
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
+  margin: 0;
 }

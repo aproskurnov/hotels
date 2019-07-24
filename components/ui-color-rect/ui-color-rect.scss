@@ -1,0 +1,30 @@
+@import "../variables/variables";
+
+.ui-color-rect{
+  width: 70px;
+  height: 70px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  &_dark100{
+    background-color: $dark-100;
+  }
+  &_dark75{
+    background-color: $dark-75;
+  }
+  &_dark50{
+    background-color: $dark-50;
+  }
+  &_dark25{
+    background-color: $dark-25;
+  }
+  &_dark5{
+    background-color: $dark-5;
+  }
+  &_purple{
+    background-color: $purple;
+  }
+  &_green{
+    background-color: $green;
+  }
+}
