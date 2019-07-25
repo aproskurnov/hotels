@@ -1,0 +1,13 @@
+mixin input-field(options)
+    -
+        var placeholder = options.placeholder?options.placeholder:''
+        var value = options.value?options.value:'';
+        var focusDemoModeClass = options.focusDemoMode?" input-field_focus-demo-mode":"";
+    div(class="input-field" + focusDemoModeClass)
+        div(class="input-field__titles")
+            div(class="input-field__title")
+                h3=options.title
+            if options.subtitle
+                div(class="input-field__subtitle")
+                    h3=options.subtitle
+        input(class="input-field__input" placeholder=placeholder value=value)

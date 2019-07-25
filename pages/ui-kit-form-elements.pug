@@ -1,0 +1,15 @@
+include ../components/input-field/input-field
+
+doctype html
+html(lang=ru)
+    head
+        meta(CHARSET=UTF-8)
+        title UI kit colors & pages
+
+    body
+        section(class="content")
+            div(class="content__column")
+                div(class="content__input-field")
+                    +input-field({placeholder:'Email', title:'Text field', subtitle:'Default'})
+                div(class="content__input-field")
+                    +input-field({placeholder:'Email', title:'Text field', subtitle:'Hover/Focus', value:'This is pretty awesome', focusDemoMode:true})
