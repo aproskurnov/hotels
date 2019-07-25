@@ -1,0 +1,44 @@
+include ../round-button/round-button
+mixin dropdown(options)
+    div(class="dropdown")
+        div(class="dropdown__titles")
+            div(class="dropdown__title")
+                h3=options.title
+            if options.subtitle
+                div(class="dropdown__subtitle")
+                    h3=options.subtitle
+        div(class="dropdown__select")
+            div(class="dropdown__value")='Сколько гостей'
+        div(class="dropdown__content")
+            div(class="dropdown-item")
+                div(class="dropdown-item__title")
+                    h3="взрослыe"
+                div(class="dropdown-item__control")
+                    div(class="dropdown-item__minus")
+                        +round-button({text:"-", disabled:true})
+                    h3(class="dropdown-item__value")=0
+                    div(class="dropdown-item__plus")
+                        +round-button({text: "+"})
+            div(class="dropdown-item")
+                div(class="dropdown-item__title")
+                    h3="дети"
+                div(class="dropdown-item__control")
+                    div(class="dropdown-item__minus")
+                        +round-button({text:"-", disabled:true})
+                    h3(class="dropdown-item__value")=0
+                    div(class="dropdown-item__plus")
+                        +round-button({text: "+"})
+            div(class="dropdown-item")
+                div(class="dropdown-item__title")
+                    h3="младенцы"
+                div(class="dropdown-item__control")
+                    div(class="dropdown-item__minus")
+                        +round-button({text:"-", disabled:true})
+                    h3(class="dropdown-item__value")=0
+                    div(class="dropdown-item__plus")
+                        +round-button({text: "+"})
+            div(class="dropdown__actions")
+                h3
+                    a(class="dropdown-link dropdown-link_cancel dropdown-link_disabled" href="#")="очистить"
+                h3
+                    a(class="dropdown-link dropdown-link_ok" href="#")="применить"

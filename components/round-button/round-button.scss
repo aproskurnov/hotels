@@ -1,0 +1,21 @@
+@import "../variables/variables";
+
+.round-button{
+  display: block;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-decoration: none;
+  border-color: $dark-50;
+  line-height: 29px;
+  outline: none;
+  color: $dark-50;
+
+  &_disabled{
+    color: $dark-25;
+    border-color: $dark-25;
+    cursor: default;
+  }
+}

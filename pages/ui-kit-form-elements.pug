@@ -1,4 +1,5 @@
 include ../components/input-field/input-field
+include ../components/dropdown/dropdown
 
 doctype html
 html(lang=ru)
@@ -9,7 +10,11 @@ html(lang=ru)
     body
         section(class="content")
             div(class="content__column")
-                div(class="content__input-field")
+                div(class="content__field")
                     +input-field({placeholder:'Email', title:'Text field', subtitle:'Default'})
-                div(class="content__input-field")
+                div(class="content__field")
                     +input-field({placeholder:'Email', title:'Text field', subtitle:'Hover/Focus', value:'This is pretty awesome', focusDemoMode:true})
+                div(class="content__field")
+                    +dropdown({title:'Dropdown', subtitle:'Default'})
+                div(class="content__field")
+                    +dropdown({title:'Dropdown2', subtitle:'Default2'})
