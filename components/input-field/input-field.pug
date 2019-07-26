@@ -2,8 +2,10 @@ mixin input-field(options)
     -
         var placeholder = options.placeholder?options.placeholder:''
         var value = options.value?options.value:'';
-        var focusDemoModeClass = options.focusDemoMode?" input-field_focus-demo-mode":"";
-    div(class="input-field" + focusDemoModeClass)
+        var mainClass = "input-field";
+        mainClass += options.focusDemoMode?" input-field_focus-demo-mode":"";
+        mainClass += options.type == "masked"?" input-field_masked":"";
+    div(class=mainClass)
         div(class="input-field__titles")
             div(class="input-field__title")
                 h3=options.title
