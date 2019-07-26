@@ -69,24 +69,6 @@
   }
 }
 
-.dropdown-item{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0 2px 0;
-  &__title{
-    margin-top: 3px;
-  }
-  &__control{
-    display: flex;
-  }
-  &__value{
-    margin-left: 11px;
-    margin-right: 12px;
-    margin-top: 3px;
-    width: 8px;
-  }
-}
-
 .dropdown-link{
   text-decoration: none;
 

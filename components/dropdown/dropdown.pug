@@ -1,6 +1,11 @@
 include ../round-button/round-button
+include ../dropdown-item/dropdown-item
+
 mixin dropdown(options)
-    div(class="dropdown")
+    -
+        var mainClasses = "dropdown";
+        mainClasses += options.isBedroom?" dropdown_bedroom":"";
+    div(class=mainClasses)
         div(class="dropdown__titles")
             div(class="dropdown__title")
                 h3=options.title
@@ -8,37 +13,18 @@ mixin dropdown(options)
                 div(class="dropdown__subtitle")
                     h3=options.subtitle
         div(class="dropdown__select")
-            div(class="dropdown__value")='Сколько гостей'
+            div(class="dropdown__value")=options.isBedroom?'Не задано':'Сколько гостей'
         div(class="dropdown__content")
-            div(class="dropdown-item")
-                div(class="dropdown-item__title")
-                    h3="взрослыe"
-                div(class="dropdown-item__control")
-                    div(class="dropdown-item__minus")
-                        +round-button({text:"-", disabled:true})
-                    h3(class="dropdown-item__value")=0
-                    div(class="dropdown-item__plus")
-                        +round-button({text: "+"})
-            div(class="dropdown-item")
-                div(class="dropdown-item__title")
-                    h3="дети"
-                div(class="dropdown-item__control")
-                    div(class="dropdown-item__minus")
-                        +round-button({text:"-", disabled:true})
-                    h3(class="dropdown-item__value")=0
-                    div(class="dropdown-item__plus")
-                        +round-button({text: "+"})
-            div(class="dropdown-item")
-                div(class="dropdown-item__title")
-                    h3="младенцы"
-                div(class="dropdown-item__control")
-                    div(class="dropdown-item__minus")
-                        +round-button({text:"-", disabled:true})
-                    h3(class="dropdown-item__value")=0
-                    div(class="dropdown-item__plus")
-                        +round-button({text: "+"})
-            div(class="dropdown__actions")
-                h3
-                    a(class="dropdown-link dropdown-link_cancel dropdown-link_disabled" href="#")="очистить"
-                h3
-                    a(class="dropdown-link dropdown-link_ok" href="#")="применить"
+            if options.isBedroom
+                +dropdown-item({title:'спальни'})
+                +dropdown-item({title:'кровати'})
+                +dropdown-item({title:'ванные комнаты'})
+            else
+                +dropdown-item({title:'взрослые'})
+                +dropdown-item({title:'дети'})
+                +dropdown-item({title:'младенцы'})
+                div(class="dropdown__actions")
+                    h3
+                        a(class="dropdown-link dropdown-link_cancel dropdown-link_disabled" href="#")="очистить"
+                    h3
+                        a(class="dropdown-link dropdown-link_ok" href="#")="применить"
