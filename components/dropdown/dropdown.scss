@@ -10,6 +10,7 @@
     line-height: 40px;
     position: relative;
     cursor: pointer;
+    outline: none;
     &:after{
       content:'';
       background-image: url('./expand_more.svg');
@@ -18,6 +19,9 @@
       position: absolute;
       top: 17px;
       right: 15px;
+    }
+    &:focus, &:hover{
+      border-color: $dark-50;
     }
   }
 
@@ -57,6 +61,10 @@
   &_expand{
     .dropdown__content{
       display: block;
+      border-color: $dark-50;
+    }
+    .dropdown__select{
+      border-color: $dark-50;
     }
   }
 }
