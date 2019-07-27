@@ -2,10 +2,13 @@
 
 .input-field{
 
+  position: relative;
+
   &__input{
-    height: 40px;
-    width: 304px;
+    height: 44px;
+    width: 100%;
     padding-left: 14px;
+    padding-right: 37px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -16,10 +19,14 @@
     font-size: 14px;
     line-height: 24px;
     outline: none;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
     &::placeholder{
       color: $dark-25;
     }
-    &:hover,:focus{
+    &:hover,&:focus{
       border-color: $dark-50;
     }
     &.input_focus-demo-mode{
@@ -42,6 +49,18 @@
   &_focus-demo-mode{
     .input-field__input{
       border-color: $dark-50;
+    }
+  }
+
+  &_subscription{
+    .input-field__subscription-button{
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: 13px;
+      top: 37px;
+      cursor: pointer;
+      background-image: url('./arrow_forward.svg');
     }
   }
 
