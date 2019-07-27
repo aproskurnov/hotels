@@ -1,8 +1,9 @@
 {
   "name": "hotels",
   "dependencies": {
+    "imask": "^5.1.7",
     "jquery": "^3.4.1",
-    "jquery-mask-plugin": "^1.14.15"
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
