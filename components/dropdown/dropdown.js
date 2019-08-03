@@ -2,15 +2,15 @@ function pluralize(count, base, singular, plural1, plural2) {
     return count + ' ' + base + ( ( count = (count %= 100) > 20 ? count % 10 : count ) === 0 || count > 4 ? plural2 : count > 1 ? plural1 : singular );
 }
 
-
-var selects = document.getElementsByClassName('dropdown__select');
-for (let el of selects){
+var dropdowns = document.querySelectorAll('.js-dropdown:not(.js-dropdown_not-expanded');
+for (let d of dropdowns){
+    let el = d.getElementsByClassName('js-dropdown__select').item(0);
     el.addEventListener('click', function(){
-        let p = this.parentNode;
-        if (p.classList.contains('dropdown_expand')){
-            p.classList.remove('dropdown_expand');
+
+        if (d.classList.contains('dropdown_expand')){
+            d.classList.remove('dropdown_expand')
         }else{
-            p.classList.add('dropdown_expand')
+            d.classList.add('dropdown_expand')
         }
     })
 }

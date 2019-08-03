@@ -1,5 +1,6 @@
 include ../components/input-field/input-field
 include ../components/dropdown/dropdown
+include ../components/dropdown-date-range/dropdown-date-range
 
 doctype html
 html(lang=ru)
@@ -15,10 +16,14 @@ html(lang=ru)
                 div(class="content__field")
                     +input-field({placeholder:'Email', title:'Text field', subtitle:'Hover/Focus', value:'This is pretty awesome', focusDemoMode:true})
                 div(class="content__field")
-                    +dropdown({title:'Dropdown3', subtitle:'Default3', isBedroom: true})
+                    +dropdown({title:'Dropdown3', subtitle:'Default3', type: "bedroom", defaultText: "Не задано"})
                 div(class="content__field")
-                    +dropdown({title:'Dropdown', subtitle:'Default'})
+                    +dropdown({title:'Dropdown', subtitle:'Default', type: "guest", defaultText: "Сколько гостей"})
                 div(class="content__field")
                     +input-field({title:'Masked text field', subtitle:'Default', type:'masked'})
                 div(class="content__field")
                     +input-field({placeholder:'Email', title:'Subscription text field', type:'subscription'})
+                div(class="content__field")
+                    +dropdown-date-range({type:'double'})
+                div(class="content__field")
+                    +dropdown-date-range({type:'single'})

@@ -1,0 +1,10 @@
+include ../dropdown/dropdown
+mixin dropdown-date-range(options)
+    div(class="dropdown-date-range")
+        if options.type == "single"
+            +dropdown({title:'Filter date dropdown', type: 'date-range', defaultText: 'Не задано'})
+        else if options.type == "double"
+            div.dropdown-date-range__element
+                +dropdown({title:'Date dropdown', type: 'date', defaultText: 'ДД.ММ.ГГГГ'})
+            div.dropdown-date-range__element
+                +dropdown({title:'Date dropdown', type: 'date', defaultText: 'ДД.ММ.ГГГГ'})

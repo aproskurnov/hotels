@@ -3,8 +3,12 @@ include ../dropdown-item/dropdown-item
 
 mixin dropdown(options)
     -
-        var mainClasses = "dropdown";
-        mainClasses += options.isBedroom?" dropdown_bedroom":"";
+        var mainClasses = "dropdown js-dropdown";
+        mainClasses += options.type == "bedroom"?" dropdown_bedroom":"";
+        mainClasses += options.type == "date"?" dropdown_date js-dropdown_date":"";
+        mainClasses += options.type == "date-range"?" dropdown_date-range js-dropdown_date-range":"";
+        if (options.type == "date" || options.type == "date-range")
+            mainClasses += " js-dropdown_not-expanded"
     div(class=mainClasses)
         div(class="dropdown__titles")
             div(class="dropdown__title")
@@ -12,14 +16,15 @@ mixin dropdown(options)
             if options.subtitle
                 div(class="dropdown__subtitle")
                     h3=options.subtitle
-        div(class="dropdown__select")
-            div(class="dropdown__value")=options.isBedroom?'Не задано':'Сколько гостей'
-        div(class="dropdown__content")
-            if options.isBedroom
+        div(class="dropdown__select js-dropdown__select")
+                div(class="dropdown__value")=options.defaultText
+        if options.type == "bedroom"
+            div(class="dropdown__content")
                 +dropdown-item({title:'спальни'})
                 +dropdown-item({title:'кровати'})
                 +dropdown-item({title:'ванные комнаты'})
-            else
+        else if options.type == "guest"
+            div(class="dropdown__content")
                 +dropdown-item({title:'взрослые'})
                 +dropdown-item({title:'дети'})
                 +dropdown-item({title:'младенцы'})
