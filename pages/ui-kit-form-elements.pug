@@ -1,6 +1,7 @@
 include ../components/input-field/input-field
 include ../components/dropdown/dropdown
 include ../components/dropdown-date-range/dropdown-date-range
+include ../components/checkbox-group/checkbox-group
 
 doctype html
 html(lang=ru)
@@ -27,3 +28,20 @@ html(lang=ru)
                     +dropdown-date-range({type:'double'})
                 div(class="content__field")
                     +dropdown-date-range({type:'single'})
+                div(class="content__field")
+                    +checkbox-group({
+                        title: 'checkbox buttons',
+                        data: [
+                            {text:'Можно курить'},
+                            {text:'Можно с питомцами'},
+                            {text:'Можно пригласить гостей (до 10 человек)'}
+                        ]
+                    })
+                div(class="content__field")
+                                    +checkbox-group({
+                                        title: 'rich checkbox buttons',
+                                        data: [
+                                            {title: 'Широкий коридор', text:'Ширина коридоров в номере не менее 91 см.'},
+                                            {title: 'Помощник для инвалидов', text:'На 1 этаже вас встретит специалист и проводит до номера.'},
+                                        ]
+                                    })

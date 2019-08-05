@@ -1,0 +1,14 @@
+
+.checkbox-group{
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__element{
+    margin-bottom: 6px;
+  }
+  &_rich{
+    &__title{
+      margin-left: 9px;
+    }
+  }
+}

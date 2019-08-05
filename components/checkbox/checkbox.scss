@@ -1,0 +1,53 @@
+@import "../variables/variables";
+
+.checkbox{
+  display: flex;
+  align-items: flex-start;
+  &__input{
+    display: none;
+    &:checked + .checkbox__element {
+      border-color: $purple;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        width: 10px;
+        height: 12px;
+        right: 0;
+        bottom: 0;
+        left: 5px;
+        background: url(./check.svg);
+      }
+    }
+  }
+  &__label{
+    margin-left: 10px;
+    max-width: 230px;
+  }
+  &__title{
+    font-weight: bold;
+  }
+  &__element{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
+  }
+  &__text{
+
+  }
+  &_rich{
+    align-items: flex-start;
+    .checkbox__element{
+      margin-top: 1px;
+    }
+    .checkbox__title{
+      line-height: 19px;
+    }
+    .checkbox__text{
+      font-size: 12px;
+    }
+  }
+}

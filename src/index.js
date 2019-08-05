@@ -16,6 +16,8 @@ import '../components/round-button/round-button.scss';
 import '../pages/ui-kit-form-elements.scss'
 import '../components/dropdown-item/dropdown-item.scss'
 import '../components/dropdown-date-range/dropdown-date-range.scss'
+import '../components/checkbox/checkbox.scss'
+import '../components/checkbox-group/checkbox-group.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'
