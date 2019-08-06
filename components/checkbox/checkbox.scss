@@ -34,6 +34,7 @@
     height: 18px;
     border: 1px solid $dark-25;
     border-radius: 4px;
+    margin-top: 2px;
   }
   &__text{
 
@@ -45,9 +46,11 @@
     }
     .checkbox__title{
       line-height: 19px;
+      margin-bottom: 5px;
     }
     .checkbox__text{
       font-size: 12px;
+      line-height: 16px;
     }
   }
 }
