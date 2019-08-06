@@ -2,6 +2,7 @@ include ../components/input-field/input-field
 include ../components/dropdown/dropdown
 include ../components/dropdown-date-range/dropdown-date-range
 include ../components/checkbox-group/checkbox-group
+include ../components/checkbox-expandable/checkbox-expandable
 
 doctype html
 html(lang=ru)
@@ -43,5 +44,19 @@ html(lang=ru)
                                         data: [
                                             {title: 'Широкий коридор', text:'Ширина коридоров в номере не менее 91 см.'},
                                             {title: 'Помощник для инвалидов', text:'На 1 этаже вас встретит специалист и проводит до номера.'},
+                                        ]
+                                    })
+                div(class="content__field")
+                                    +checkbox-expandable({
+                                        title: 'Expandable checkbox list',
+                                        data: [
+                                            {text:'Завтрак'},
+                                            {text:'Письменный стол'},
+                                            {text:'Стул для кормления'},
+                                            {text:'Кроватка'},
+                                            {text:'Телевизор'},
+                                            {text:'Шампунь'},
+                                            {text:'Телевизор'},
+                                            {text:'Шампунь'},
                                         ]
                                     })

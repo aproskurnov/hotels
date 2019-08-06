@@ -1,0 +1,12 @@
+include ../checkbox/checkbox
+
+mixin checkbox-expandable(options)
+    -
+        var mainClasses = "checkbox-expandable js-checkbox-expandable";
+    div(class=mainClasses)
+        div(class="checkbox-expandable__title js-checkbox-expandable__title")
+            h3=options.title
+        div(class="checkbox-expandable__content")
+            each obj in options.data
+                div(class="checkbox-expandable__element")
+                    +checkbox(obj)

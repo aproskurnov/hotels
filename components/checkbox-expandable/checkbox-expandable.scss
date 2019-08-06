@@ -1,0 +1,41 @@
+.checkbox-expandable{
+  &__title{
+    margin-bottom: 11px;
+    position: relative;
+    cursor: pointer;
+    &:after{
+      content: '';
+      background: url('./expand_more.svg');
+      width: 12px;
+      height: 8px;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+    }
+  }
+  &__content{
+    display: none;
+  }
+  &__element{
+    margin-bottom: 6px;
+  }
+  &_expanded{
+    .checkbox-expandable{
+      &__content{
+        display: block;
+      }
+      &__title{
+        &:after{
+          content: '';
+          background: url('./expand_more.svg');
+          transform: rotate(-180deg);
+          width: 12px;
+          height: 8px;
+          position: absolute;
+          right: 10px;
+          top: 7px;
+        }
+      }
+    }
+  }
+}

@@ -18,10 +18,12 @@ import '../components/dropdown-item/dropdown-item.scss'
 import '../components/dropdown-date-range/dropdown-date-range.scss'
 import '../components/checkbox/checkbox.scss'
 import '../components/checkbox-group/checkbox-group.scss'
+import '../components/checkbox-expandable/checkbox-expandable.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'
 import '../components/input-field/input-field'
+import '../components/checkbox-expandable/checkbox-expandable'
 
 
 var f = ()=>console.log('hello world');
