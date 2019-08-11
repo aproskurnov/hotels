@@ -6,6 +6,7 @@ include ../components/checkbox-expandable/checkbox-expandable
 include ../components/bullet-list/bullet-list
 include ../components/radio-buttons/radio-buttons
 include ../components/toggle/toggle
+include ../components/like-button/like-button
 
 doctype html
 html(lang=ru)
@@ -86,3 +87,5 @@ html(lang=ru)
                          name: 'subscribe',
                          text: 'Получать спецпредложения'
                      })
+                div(class="content__field")
+                     +like-button({count: 12})

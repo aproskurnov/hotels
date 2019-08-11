@@ -23,12 +23,14 @@ import '../components/bullet-list/bullet-list.scss'
 import '../components/radio-button/radio-button.scss'
 import '../components/radio-buttons/radio-buttons.scss'
 import '../components/toggle/toggle.scss'
+import '../components/like-button/like-button.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'
 import '../components/input-field/input-field'
 import '../components/checkbox-expandable/checkbox-expandable'
 import '../components/radio-button/radio-button'
+import '../components/like-button/like-button'
 
 
 var f = ()=>console.log('hello world');

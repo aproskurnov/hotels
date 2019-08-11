@@ -1,0 +1,36 @@
+@import "../variables/variables";
+
+.like-button{
+  position: relative;
+  width: 38px;
+  height: 18px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: $dark-25;
+  text-align: center;
+  cursor: pointer;
+
+  color: $dark-25;
+  &__count{
+    font-size: 10px;
+    line-height: 20px;
+    margin-left: 9px;
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    left: 4px;
+    top: 5px;
+    background-image: url("./like_off.svg");
+  }
+  &_checked{
+    color: $purple;
+    border-color: $purple;
+    &:before{
+      background-image: url("./like_on.svg");
+    }
+  }
+}
