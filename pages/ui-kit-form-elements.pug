@@ -7,6 +7,7 @@ include ../components/bullet-list/bullet-list
 include ../components/radio-buttons/radio-buttons
 include ../components/toggle/toggle
 include ../components/like-button/like-button
+include ../components/rate-button/rate-button
 
 doctype html
 html(lang=ru)
@@ -89,3 +90,7 @@ html(lang=ru)
                      })
                 div(class="content__field")
                      +like-button({count: 12})
+                div(class="content__field")
+                    +rate-button({name:"rating1"})
+                div(class="content__field")
+                    +rate-button({name:"rating2"})

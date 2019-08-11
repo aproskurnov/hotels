@@ -24,6 +24,7 @@ import '../components/radio-button/radio-button.scss'
 import '../components/radio-buttons/radio-buttons.scss'
 import '../components/toggle/toggle.scss'
 import '../components/like-button/like-button.scss'
+import '../components/rate-button/rate-button.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'

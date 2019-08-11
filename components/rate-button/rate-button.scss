@@ -1,0 +1,41 @@
+@import "../variables/variables";
+
+.rate-button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  &__element {
+    cursor: pointer;
+    color: $purple;
+    display: block;
+    width: 20px;
+    height: 18px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 19px;
+        background-image: url("./star_off.svg");
+      }
+
+      &:hover,
+      &:hover ~ label {
+        &:before {
+          content: '';
+          background-image: url("./star_on.svg");
+        }
+      }
+  }
+  &__input {
+    display: none;
+    &:checked {
+      & ~ label {
+        &:before {
+          content: '';
+          background-image: url("./star_on.svg");
+        }
+      }
+    }
+  }
+}
