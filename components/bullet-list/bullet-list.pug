@@ -1,0 +1,7 @@
+mixin bullet-list(options)
+    div(class="bullet-list")
+        div(class="bullet-list__title")
+            h3=options.title
+        ul(class="bullet-list__content")
+            each obj in options.data
+                li(class="checkbox-group__element")=obj.text

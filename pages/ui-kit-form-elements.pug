@@ -3,6 +3,7 @@ include ../components/dropdown/dropdown
 include ../components/dropdown-date-range/dropdown-date-range
 include ../components/checkbox-group/checkbox-group
 include ../components/checkbox-expandable/checkbox-expandable
+include ../components/bullet-list/bullet-list
 
 doctype html
 html(lang=ru)
@@ -29,6 +30,7 @@ html(lang=ru)
                     +dropdown-date-range({type:'double'})
                 div(class="content__field")
                     +dropdown-date-range({type:'single'})
+            div(class="content__column")
                 div(class="content__field")
                     +checkbox-group({
                         title: 'checkbox buttons',
@@ -39,24 +41,33 @@ html(lang=ru)
                         ]
                     })
                 div(class="content__field")
-                                    +checkbox-group({
-                                        title: 'rich checkbox buttons',
-                                        data: [
-                                            {title: 'Широкий коридор', text:'Ширина коридоров в номере не менее 91 см.'},
-                                            {title: 'Помощник для инвалидов', text:'На 1 этаже вас встретит специалист и проводит до номера.'},
-                                        ]
-                                    })
+                    +checkbox-group({
+                        title: 'rich checkbox buttons',
+                        data: [
+                            {title: 'Широкий коридор', text:'Ширина коридоров в номере не менее 91 см.'},
+                            {title: 'Помощник для инвалидов', text:'На 1 этаже вас встретит специалист и проводит до номера.'},
+                        ]
+                    })
                 div(class="content__field")
-                                    +checkbox-expandable({
-                                        title: 'Expandable checkbox list',
-                                        data: [
-                                            {text:'Завтрак'},
-                                            {text:'Письменный стол'},
-                                            {text:'Стул для кормления'},
-                                            {text:'Кроватка'},
-                                            {text:'Телевизор'},
-                                            {text:'Шампунь'},
-                                            {text:'Телевизор'},
-                                            {text:'Шампунь'},
-                                        ]
-                                    })
+                    +checkbox-expandable({
+                        title: 'Expandable checkbox list',
+                        data: [
+                            {text:'Завтрак'},
+                            {text:'Письменный стол'},
+                            {text:'Стул для кормления'},
+                            {text:'Кроватка'},
+                            {text:'Телевизор'},
+                            {text:'Шампунь'},
+                            {text:'Телевизор'},
+                            {text:'Шампунь'},
+                        ]
+                    })
+                div(class="content__field")
+                    +bullet-list({
+                        title: 'Bullet list',
+                        data: [
+                            {text:'Нельзя с питомцами'},
+                            {text:'Без вечеринок и мероприятий'},
+                            {text:'Время прибытия — после 13:00, а выезд до 12:00'},
+                        ]
+                    })
