@@ -4,6 +4,7 @@ include ../components/dropdown-date-range/dropdown-date-range
 include ../components/checkbox-group/checkbox-group
 include ../components/checkbox-expandable/checkbox-expandable
 include ../components/bullet-list/bullet-list
+include ../components/radio-buttons/radio-buttons
 
 doctype html
 html(lang=ru)
@@ -69,5 +70,13 @@ html(lang=ru)
                             {text:'Нельзя с питомцами'},
                             {text:'Без вечеринок и мероприятий'},
                             {text:'Время прибытия — после 13:00, а выезд до 12:00'},
+                        ]
+                    })
+                div(class="content__field")
+                    +radio-buttons({
+                        title: 'Radio buttons',
+                        data: [
+                            {text:'Мужчина', value: 1, name: 'sex'},
+                            {text:'Женщина', value: 2, name: 'sex', checked: true},
                         ]
                     })

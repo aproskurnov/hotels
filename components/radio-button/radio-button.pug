@@ -1,0 +1,5 @@
+mixin radio-button(options)
+    div(class="radio-button js-radio-button")
+        input(class="radio-button__input js-radio-button__input" name=options.name type="radio" value=options.value checked=options.checked)
+        div(class="radio-button__element")
+        div(class="radio-button__text")=options.text
