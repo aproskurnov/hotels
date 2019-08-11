@@ -1,0 +1,5 @@
+mixin toggle(options)
+    label(class="toggle")
+        input(class="toggle__input" type="checkbox" name=options.name)
+        <div class="toggle__element"></div>
+        div(class="toggle__label")=options.text

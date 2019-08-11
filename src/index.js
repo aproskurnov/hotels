@@ -22,6 +22,7 @@ import '../components/checkbox-expandable/checkbox-expandable.scss'
 import '../components/bullet-list/bullet-list.scss'
 import '../components/radio-button/radio-button.scss'
 import '../components/radio-buttons/radio-buttons.scss'
+import '../components/toggle/toggle.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'

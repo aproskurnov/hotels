@@ -2,8 +2,9 @@ include ../radio-button/radio-button
 
 mixin radio-buttons(options)
     div(class="radio-buttons")
-        div(class="radio-buttons__title")
-            h3=options.title
+        if (options.title)
+            div(class="radio-buttons__title")
+                h3=options.title
         div(class="radio-buttons__content")
             each obj in options.data
                 div(class="radio-buttons__element")

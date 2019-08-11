@@ -5,6 +5,7 @@ include ../components/checkbox-group/checkbox-group
 include ../components/checkbox-expandable/checkbox-expandable
 include ../components/bullet-list/bullet-list
 include ../components/radio-buttons/radio-buttons
+include ../components/toggle/toggle
 
 doctype html
 html(lang=ru)
@@ -80,3 +81,8 @@ html(lang=ru)
                             {text:'Женщина', value: 2, name: 'sex', checked: true},
                         ]
                     })
+                div(class="content__field")
+                     +toggle({
+                         name: 'subscribe',
+                         text: 'Получать спецпредложения'
+                     })
