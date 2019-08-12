@@ -1,0 +1,23 @@
+include ../pagination-button/pagination-button
+
+mixin pagination(options)
+    -
+        var i = 1;
+        var c = 6;
+    div(class="pagination")
+        div(class="pagination__element")
+            while i <= c
+                if (i == 1)
+                    +pagination-button({val:i++, type:"current"})
+                if (i == 4)
+                    +pagination-button({val:'...', type:"middle"})
+                    - i++;
+                else if (i == c-1)
+                    +pagination-button({val:options.count})
+                    - i++;
+                else if (i == c)
+                    +pagination-button({val:'', type:"next"})
+                    - i++;
+                else
+                    +pagination-button({val:i++})
+        div(class="pagination__title")='1 – 12 из 100+ вариантов аренды'

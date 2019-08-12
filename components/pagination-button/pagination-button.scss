@@ -1,0 +1,37 @@
+@import "../variables/variables";
+
+.pagination-button{
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__value{
+
+  }
+
+  &_current{
+    border-radius: 50%;
+    background: linear-gradient(180deg, $purple 0%, $blue 100%);
+    color: #ffffff;
+  }
+  &_next{
+    border-radius: 50%;
+    background: linear-gradient(180deg, $green 0%, $light-blue 100%);
+    position: relative;
+
+    &:after{
+      content: '';
+      background-image: url("./arrow_forward.svg");
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      right: 11px;
+      top: 12px;
+    }
+
+  }
+
+}

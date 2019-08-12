@@ -27,6 +27,8 @@ import '../components/like-button/like-button.scss'
 import '../components/rate-button/rate-button.scss'
 import '../components/slider/slider.scss'
 import '../components/button/button.scss'
+import '../components/pagination/pagination.scss'
+import '../components/pagination-button/pagination-button.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'

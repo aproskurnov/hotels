@@ -1,0 +1,9 @@
+.pagination{
+  &__element{
+    display: flex;
+  }
+  &__title{
+    margin-left: 6px;
+    margin-top: 8px;
+  }
+}
