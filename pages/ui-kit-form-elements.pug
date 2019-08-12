@@ -12,6 +12,7 @@ include ../components/slider/slider
 include ../components/button/button
 include ../components/pagination/pagination
 include ../components/properties-group/properties-group
+include ../components/review/review
 
 doctype html
 html(lang=ru)
@@ -117,5 +118,15 @@ html(lang=ru)
                     +button({title: "Перейти к оплате", arrow: true})
                 div(class="content__field")
                     +pagination({count:15})
+        section(class="content")
+            div(class="content__column")
                 div(class="content__field")
                     +properties-group({})
+            div(class="content__column")
+                div(class="content__field")
+                    +review({
+                        name: 'Мурад Сарафанов',
+                        date: '5 дней назад',
+                        text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.'+
+                        'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                    })
