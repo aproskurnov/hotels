@@ -26,6 +26,7 @@ import '../components/toggle/toggle.scss'
 import '../components/like-button/like-button.scss'
 import '../components/rate-button/rate-button.scss'
 import '../components/slider/slider.scss'
+import '../components/button/button.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'

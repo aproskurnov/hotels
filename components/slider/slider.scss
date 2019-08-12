@@ -35,11 +35,11 @@ html:not([dir="rtl"]) .slider .noUi-horizontal .noUi-handle {
       box-shadow: none;
     }
     .noUi-connect{
-      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      background: linear-gradient(180deg, $green 0%, $light-blue 100%);
     }
     .noUi-handle{
       border-radius: 50%;
-      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      background: linear-gradient(180deg, $green 0%, $light-blue 100%);
       box-shadow: none;
 
       &:before, &:after{

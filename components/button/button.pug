@@ -1,6 +1,7 @@
 mixin button(options)
     -
         var buttonClassName = "button"
-        buttonClassName += options.isBusiness ? " button_business" : ""
-
-    button(class=buttonClassName)= options.title
+        buttonClassName += options.theme == 'white' ? " button_theme-white" : ""
+        buttonClassName += options.theme == 'light' ? " button_theme-light" : ""
+        buttonClassName += options.arrow ? " button_arrow" : ""
+    button(class=buttonClassName type="submit" disabled=options.disabled)=options.title

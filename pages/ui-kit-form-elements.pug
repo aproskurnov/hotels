@@ -9,6 +9,7 @@ include ../components/toggle/toggle
 include ../components/like-button/like-button
 include ../components/rate-button/rate-button
 include ../components/slider/slider
+include ../components/button/button
 
 doctype html
 html(lang=ru)
@@ -98,3 +99,17 @@ html(lang=ru)
             div(class="content__column")
                 div(class="content__field")
                     +slider({title: "Range slider"})
+                div(class="content__field")
+                    +button({title: "Click me"})
+                div(class="content__field")
+                    +button({title: "Click me", disabled: true})
+                div(class="content__field")
+                    +button({title: "Click me", theme: "white"})
+                div(class="content__field")
+                    +button({title: "Click me", theme: "white", disabled: true})
+                div(class="content__field")
+                    +button({title: "Click me", theme: "light"})
+                div(class="content__field")
+                    +button({title: "Click me", theme: "light", disabled: true})
+                div(class="content__field")
+                    +button({title: "Перейти к оплате", arrow: true})
