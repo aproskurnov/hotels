@@ -1,0 +1,43 @@
+@import "../variables/variables";
+
+.property{
+  display: flex;
+  border-bottom: 1px solid rgba($dark-100, 0.1);
+  padding: 20px 0;
+  &__image{
+    background-repeat: no-repeat;
+
+  }
+  &__content{
+    margin-left: 10px;
+  }
+  &__title{
+    font-weight: bold;
+
+  }
+
+  &_comfort{
+    .property__image{
+      background-image: url("./comfort.svg");
+      width: 40px;
+      height: 40px;
+      margin: 4px;
+    }
+  }
+  &_location{
+    .property__image{
+      background-image: url("./location.svg");
+      width: 36px;
+      height: 38px;
+      margin: 5px 6px;
+    }
+  }
+  &_details{
+    .property__image{
+      background-image: url("./details.svg");
+      width: 34px;
+      height: 43px;
+      margin: 2px 7px 3px 7px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+include ../property/property
+
+mixin properties-group(options)
+    div(class="properties-group")
+        div(class="properties-group__title")
+            h2="Сведения о номере"
+        +property({
+            type:"comfort",
+            title: "Комфорт",
+            text: "Шумопоглощающие стены"
+        })
+        +property({
+            type:"location",
+            title: "Удобство",
+            text: "Окно в каждой из спален"
+        })
+        +property({
+            type:"details",
+            title: "Уют",
+            text: "Номер оснащен камином"
+        })

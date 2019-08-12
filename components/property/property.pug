@@ -1,0 +1,11 @@
+mixin property(options)
+    -
+        var mod = '';
+        if (options.type == 'comfort') mod = 'property_comfort';
+        if (options.type == 'location') mod = 'property_location';
+        if (options.type == 'details') mod = 'property_details';
+    div(class="property " + mod)
+        div(class="property__image")
+        div(class="property__content")
+            div(class="property__title")=options.title
+            div(class="property__text")=options.text

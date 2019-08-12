@@ -29,6 +29,8 @@ import '../components/slider/slider.scss'
 import '../components/button/button.scss'
 import '../components/pagination/pagination.scss'
 import '../components/pagination-button/pagination-button.scss'
+import '../components/property/property.scss'
+import '../components/properties-group/properties-group.scss'
 
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'

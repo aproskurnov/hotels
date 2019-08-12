@@ -8,17 +8,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
   &__value{
 
   }
 
   &_current{
-    border-radius: 50%;
     background: linear-gradient(180deg, $purple 0%, $blue 100%);
     color: #ffffff;
   }
+  &_middle{
+    cursor: default;
+  }
   &_next{
-    border-radius: 50%;
     background: linear-gradient(180deg, $green 0%, $light-blue 100%);
     position: relative;
 
