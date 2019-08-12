@@ -8,6 +8,7 @@ include ../components/radio-buttons/radio-buttons
 include ../components/toggle/toggle
 include ../components/like-button/like-button
 include ../components/rate-button/rate-button
+include ../components/slider/slider
 
 doctype html
 html(lang=ru)
@@ -94,3 +95,6 @@ html(lang=ru)
                     +rate-button({name:"rating1"})
                 div(class="content__field")
                     +rate-button({name:"rating2"})
+            div(class="content__column")
+                div(class="content__field")
+                    +slider({title: "Range slider"})

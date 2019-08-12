@@ -4,7 +4,8 @@
     "flatpickr": "^4.6.2",
     "imask": "^5.1.7",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "nouislider": "^14.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

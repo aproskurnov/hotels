@@ -1,0 +1,51 @@
+@import "../variables/variables";
+
+
+html:not([dir="rtl"]) .slider .noUi-horizontal .noUi-handle {
+  right: -11px;
+}
+
+.slider{
+  min-width: 400px;
+  &__titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+  &__subtitle{
+    h3{
+      color: $dark-50;
+      font-weight: normal;
+    }
+  }
+
+  &__element{
+    &.noUi-horizontal{
+      height: 6px;
+      .noUi-handle{
+        width: 16px;
+        height: 16px;
+        top: -6px;
+        border: 2px solid;
+        border-color: #fff;
+      }
+    }
+    &.noUi-target{
+      border-radius: 12px;
+      box-shadow: none;
+    }
+    .noUi-connect{
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+    .noUi-handle{
+      border-radius: 50%;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      box-shadow: none;
+
+      &:before, &:after{
+        content: none;
+      }
+
+    }
+  }
+}
