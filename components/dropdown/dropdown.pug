@@ -5,10 +5,7 @@ mixin dropdown(options)
     -
         var mainClasses = "dropdown js-dropdown";
         mainClasses += options.type == "bedroom"?" dropdown_bedroom":"";
-        mainClasses += options.type == "date"?" dropdown_date js-dropdown_date":"";
-        mainClasses += options.type == "date-range"?" dropdown_date-range js-dropdown_date-range":"";
-        if (options.type == "date" || options.type == "date-range")
-            mainClasses += " js-dropdown_not-expanded"
+        if (options.expandable) mainClasses += " js-dropdown_expandable"
     div(class=mainClasses)
         div(class="dropdown__titles")
             div(class="dropdown__title")

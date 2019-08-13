@@ -1,10 +1,21 @@
 include ../dropdown/dropdown
+
 mixin dropdown-date-range(options)
-    div(class="dropdown-date-range")
+    -
+        var mod = '';
+        if (options.type == 'splitted') mod += ' js-dropdown-date-range_splitted';
+        if (options.type == 'single') mod += ' js-dropdown-date-range_single';
+        if (options.type == 'double') mod += ' js-dropdown-date-range_double';
+    div(class="dropdown-date-range" + mod)
         if options.type == "single"
-            +dropdown({title:'Filter date dropdown', type: 'date-range', defaultText: 'Не задано'})
+            +dropdown({title:'Filter date dropdown', defaultText: 'Не задано'})
+        if options.type == "splitted"
+            div.dropdown-date-range__element
+                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
+            div.dropdown-date-range__element
+                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
         else if options.type == "double"
             div.dropdown-date-range__element
-                +dropdown({title:'Date dropdown', type: 'date', defaultText: 'ДД.ММ.ГГГГ'})
+                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
             div.dropdown-date-range__element
-                +dropdown({title:'Date dropdown', type: 'date', defaultText: 'ДД.ММ.ГГГГ'})
+                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})

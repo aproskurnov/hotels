@@ -2,16 +2,11 @@ function pluralize(count, base, singular, plural1, plural2) {
     return count + ' ' + base + ( ( count = (count %= 100) > 20 ? count % 10 : count ) === 0 || count > 4 ? plural2 : count > 1 ? plural1 : singular );
 }
 
-var dropdowns = document.querySelectorAll('.js-dropdown:not(.js-dropdown_not-expanded');
+var dropdowns = document.querySelectorAll('.js-dropdown_expandable');
 for (let d of dropdowns){
     let el = d.getElementsByClassName('js-dropdown__select').item(0);
     el.addEventListener('click', function(){
-
-        if (d.classList.contains('dropdown_expand')){
-            d.classList.remove('dropdown_expand')
-        }else{
-            d.classList.add('dropdown_expand')
-        }
+        d.classList.toggle('dropdown_expanded')
     })
 }
 
