@@ -33,7 +33,9 @@ import '../components/property/property.scss'
 import '../components/properties-group/properties-group.scss'
 import '../components/review/review.scss'
 //ui-kit-cards
+
 import '../components/login/login.scss'
+import '../components/register/register.scss'
 
 //js
 import '../components/dropdown/dropdown'

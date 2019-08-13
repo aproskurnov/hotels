@@ -1,0 +1,36 @@
+include ../input-field/input-field
+include ../radio-buttons/radio-buttons
+include ../toggle/toggle
+
+mixin register(options)
+    div.register
+        h1.register__title='Регистрация аккаунта'
+        form.register__form
+            div.register__field
+                +input-field({placeholder:'Имя'})
+            div.register__field
+                +input-field({placeholder:'Фамилия'})
+            div.register__sex
+                +radio-buttons({
+                    data: [
+                        {text:'Мужчина', value: 1, name: 'sex', checked: true},
+                        {text:'Женщина', value: 2, name: 'sex'},
+                    ]
+                })
+            div.register__birthdate
+                +input-field({title:'Дата рождения', type:'masked'})
+            div.register__enter-data
+                div.register__field
+                    +input-field({placeholder:'Email', type:'email', title:'Данные для входа в сервис'})
+                div.register__field
+                    +input-field({placeholder:'Пароль', type:'password'})
+            div.register__subscribe
+                +toggle({
+                     name: 'subscribe',
+                     text: 'Получать спецпредложения'
+                 })
+            div.register__action
+                +button({title:'Зарегистрироваться', arrow:true, fullwide: true})
+        div(class="register__login")
+            div(class="register__login-text")='Уже есть аккаунт на Toxin?'
+            +button({title:'Войти', theme:"white"})
