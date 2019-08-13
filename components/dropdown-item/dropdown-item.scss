@@ -1,17 +1,15 @@
 .dropdown-item{
   display: flex;
   justify-content: space-between;
-  padding: 5px 0 2px 0;
-  &__title{
-    margin-top: 3px;
-  }
+  align-items: center;
+  padding: 6px 0 0 0;
   &__control{
     display: flex;
+    align-items: center;
   }
   &__value{
-    margin-left: 11px;
-    margin-right: 12px;
-    margin-top: 3px;
-    width: 8px;
+    width: 32px;
+    text-align: center;
+    box-sizing: border-box;
   }
 }

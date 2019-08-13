@@ -53,7 +53,8 @@ function recalcBedroom(dropdown){
 //controls
 let minus = document.getElementsByClassName('dropdown-item__minus');
 for( let el of minus ){
-    el.addEventListener('click', function(){
+    el.addEventListener('click', function(e){
+        e.preventDefault();
         let btn = this.firstChild;
         if (!btn.classList.contains('round-button_disabled')){
             let i = --this.nextSibling.innerHTML;
@@ -66,12 +67,14 @@ for( let el of minus ){
                 recalcBedroom(dropdown);
             }
         }
+
     })
 }
 
 let plus = document.getElementsByClassName('dropdown-item__plus');
 for( let el of plus ){
-    el.addEventListener('click', function(){
+    el.addEventListener('click', function(e){
+        e.preventDefault();
         let btn = this.firstChild;
         if (!btn.classList.contains('round-button_disabled')){
             let i = ++this.previousSibling.innerHTML;
@@ -84,13 +87,15 @@ for( let el of plus ){
                 recalcBedroom(dropdown);
             }
         }
+        return false;
     })
 }
 
 //buttons
 let ok = document.getElementsByClassName('dropdown-link_ok');
 for( let el of ok ){
-    el.addEventListener('click', function(){
+    el.addEventListener('click', function(e){
+        e.preventDefault();
         let dropdown = this.closest('.dropdown');
         let count = calcVal(dropdown);
 
@@ -98,12 +103,14 @@ for( let el of ok ){
             dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = pluralize(count, 'Гост', 'ь','я', 'ей');
             dropdown.getElementsByClassName('dropdown-link_cancel').item(0).classList.remove('dropdown-link_disabled')
         }
+        dropdown.classList.toggle('dropdown_expanded');
     })
 }
 
 let cancel = document.getElementsByClassName('dropdown-link_cancel');
 for( let el of cancel ){
-    el.addEventListener('click', function(){
+    el.addEventListener('click', function(e){
+        e.preventDefault();
         let dropdown = this.closest('.dropdown');
         let vals = dropdown.getElementsByClassName('dropdown-item__value');
         let count = 0;

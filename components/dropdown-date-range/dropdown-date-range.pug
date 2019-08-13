@@ -8,14 +8,14 @@ mixin dropdown-date-range(options)
         if (options.type == 'double') mod += ' js-dropdown-date-range_double';
     div(class="dropdown-date-range" + mod)
         if options.type == "single"
-            +dropdown({title:'Filter date dropdown', defaultText: 'Не задано'})
+            +dropdown({title:options.title, defaultText: 'Не задано'})
         if options.type == "splitted"
             div.dropdown-date-range__element
-                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
+                +dropdown({title:options.title, defaultText: 'ДД.ММ.ГГГГ', expanded: false})
             div.dropdown-date-range__element
-                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
+                +dropdown({title:options.title2, defaultText: 'ДД.ММ.ГГГГ', expanded: false})
         else if options.type == "double"
             div.dropdown-date-range__element
-                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
+                +dropdown({title:options.title, defaultText: 'ДД.ММ.ГГГГ', expanded: false})
             div.dropdown-date-range__element
-                +dropdown({title:'Date dropdown', defaultText: 'ДД.ММ.ГГГГ', expanded: false})
+                +dropdown({title:options.title2, defaultText: 'ДД.ММ.ГГГГ', expanded: false})

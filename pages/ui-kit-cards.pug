@@ -1,5 +1,6 @@
 include ../components/login/login
 include ../components/register/register
+include ../components/find-room/find-room
 
 doctype html
 html(lang=ru)
@@ -14,3 +15,6 @@ html(lang=ru)
                     +login({})
                 div(class="content__field")
                     +register({})
+            div(class="content__column")
+                div(class="content__field")
+                    +find-room({})

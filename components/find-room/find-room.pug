@@ -1,0 +1,13 @@
+include ../dropdown-date-range/dropdown-date-range
+include ../dropdown/dropdown
+include ../button/button
+
+mixin find-room(options)
+    div.find-room
+        h1.find-room__title='Найдем номера под ваши пожелания'
+        form
+            +dropdown-date-range({type:"splitted", title: "Прибытие", title2: "Выезд"})
+            div.find-room__guest
+                +dropdown({type:"guest", title: "Гости", defaultText: "Сколько гостей", expandable: true})
+            div.find-room__action
+                +button({title:'Подобрать номер', fullwide: true, arrow: true})

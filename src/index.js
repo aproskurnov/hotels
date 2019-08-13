@@ -36,6 +36,7 @@ import '../components/review/review.scss'
 
 import '../components/login/login.scss'
 import '../components/register/register.scss'
+import '../components/find-room/find-room.scss'
 
 //js
 import '../components/dropdown/dropdown'
