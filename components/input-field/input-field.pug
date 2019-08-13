@@ -2,6 +2,7 @@ mixin input-field(options)
     -
         var placeholder = options.placeholder?options.placeholder:''
         var value = options.value?options.value:'';
+        var type = options.type || 'text';
         var mainClass = "input-field";
         mainClass += options.focusDemoMode?" input-field_focus-demo-mode":"";
         mainClass += options.type == "masked"?" input-field_masked":"";
@@ -13,5 +14,5 @@ mixin input-field(options)
             if options.subtitle
                 div(class="input-field__subtitle")
                     h3=options.subtitle
-        input(class="input-field__input" placeholder=placeholder value=value)
+        input(class="input-field__input" placeholder=options.placeholder value=options.value type=type)
         div.input-field__subscription-button

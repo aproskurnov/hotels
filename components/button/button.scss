@@ -21,7 +21,7 @@
     color: $purple;
     border: 2px solid;
     border-color: $purple;
-    padding: 8px 18px;
+    padding: 8px 17px;
   }
 
   &_theme-light{
@@ -45,6 +45,9 @@
       right: 13px;
       top: 12px;
     }
+  }
+  &_fullwide{
+    width: 100%;
   }
 
 }

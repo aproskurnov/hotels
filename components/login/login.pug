@@ -1,0 +1,15 @@
+include ../input-field/input-field
+include ../button/button
+
+mixin login(options)
+    div(class="login")
+        h1(class="login__title")='Войти'
+        div(class="login__field")
+            +input-field({placeholder:'Email'})
+        div(class="login__field")
+            +input-field({placeholder:'Пароль'})
+        div(class="login__enter")
+            +button({title:'Войти', arrow:true, fullwide: true})
+        div(class="login__register")
+            div(class="login__register-text")='Нет аккаунта на Toxin?'
+            +button({title:'Создать', theme:"white"})

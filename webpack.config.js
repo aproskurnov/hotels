@@ -74,6 +74,10 @@ module.exports = {
 			filename: "ui-kit-form-elements.html",
 			template: './pages/ui-kit-form-elements.pug'
 		}),
+		new HtmlWebpackPlugin({
+			filename: "ui-kit-cards.html",
+			template: './pages/ui-kit-cards.pug'
+		}),
 
 		// new HtmlWebpackPlugin({
 		// 	filename: "test.html",
