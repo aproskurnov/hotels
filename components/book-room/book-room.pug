@@ -1,0 +1,57 @@
+include ../button/button
+include ../dropdown-date-range/dropdown-date-range
+include ../dropdown/dropdown
+
+mixin book-room(options)
+    div.book-room
+        form
+            div.book-room__info
+                div.book-room__num-info
+                    div.book-room__sign="№"
+                    div.book-room__num="888"
+                    div.book-room__text="люкс"
+                div.book-room__price-info
+                    div.book-room__price="9 990"
+                    div.book-room__price-currency="₽"
+                    div.book-room__price-text="в сутки"
+            +dropdown-date-range({type:"splitted", title: "Прибытие", title2: "Выезд"})
+            div.book-room__guest
+                +dropdown({type:"guest", title: "Гости", defaultText: "Сколько гостей", expandable: true})
+            div.book-room__properties
+                div.book-room__property-item
+                    div.book-room__property-item-title
+                        div.book-room__property-item-title-price
+                            div.book-room__property-item-title-price-value="9 990"
+                            div.book-room__property-item-title-currency="₽"
+                            div.book-room__property-item-title-sign="x"
+                            div.book-room__property-item-title-count-days="4"
+                            div.book-room__property-item-title-count-days-text="суток"
+                    div.book-room__property-item-sum
+                        div.book-room__property-item-sum-value="39 960"
+                        div.book-room__property-item-sum-currency="₽"
+                div.book-room__property-item
+                    div.book-room__property-item-title
+                        div.book-room__property-item-title-discont
+                            div.book-room__property-item-title-discount-text="Сбор за услуги: скидка"
+                            div.book-room__property-item-title-discont-value="2 179"
+                            div.book-room__property-item-title-currency="₽"
+                        div.book-room__property-item-info-sign="i"
+                            span.book-room__info-sign-message="Информационное сообщение о том, о сем"
+                    div.book-room__property-item-sum
+                        div.book-room__property-item-sum-value="0"
+                        div.book-room__property-item-sum-currency="₽"
+                div.book-room__property-item
+                    div.book-room__property-item-title
+                        div.book-room__property-item-title-services-text="Сбор за дополнительные услуги"
+                        div.book-room__property-item-info-sign="i"
+                            span.book-room__info-sign-message="Информационное сообщение о том, о сем"
+                    div.book-room__property-item-sum
+                        div.book-room__property-item-sum-value="300"
+                        div.book-room__property-item-sum-currency="₽"
+            div.book-room__result
+                div.book-room__result-text="Итого"
+                div.book-room__result-price
+                    div.book-room__result-price-value="38 081"
+                    div.book-room__result-price-currency="₽"
+            div.book-room__action
+                +button({title:'Забронировать', fullwide: true, arrow: true})

@@ -1,0 +1,149 @@
+@import "../variables/variables";
+
+.book-room{
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 21px;
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 17px;
+  }
+  &__sign{
+    margin-right: 5px;
+    font-family: $quicksand;
+  }
+  &__num{
+    font-size: 24px;
+    line-height: 12px;
+    font-family: $quicksand;
+  }
+  &__text{
+    color: $purple;
+    font-size: 12px;
+    margin-left: 5px;
+    text-transform: uppercase;
+  }
+  &__num-info{
+    display: flex;
+    color: $dark-100;
+  }
+  &__price-info{
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19px;
+    color: $dark-50;
+  }
+  &__price-text{
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 4px;
+  }
+  &__guest{
+    margin-top: 20px;
+  }
+  &__properties{
+    padding: 18px 0 30px 0;
+  }
+  &__property-info{
+    display: flex;
+  }
+  &__property-item{
+    display: flex;
+    justify-content: space-between;
+    &:not(:first-child){
+      padding-top: 11px;
+    }
+  }
+  &__property-item-title{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  &__property-item-title-price{
+    display: flex;
+  }
+  &__property-item-title-discont{
+    display: flex;
+  }
+  &__property-item-title-discont-value{
+    margin-left: 4px;
+  }
+  &__property-item-sum{
+    display: flex;
+    line-height: 23px;
+  }
+  &__property-item-title-sign{
+    width: 13px;
+    text-align: center;
+  }
+  &__property-item-title-count-days-text{
+    margin-left: 4px;
+  }
+  &__property-item-title-text{
+    margin-right: 3px;
+  }
+  &__property-item-title-services-text{
+    line-height: 18px;
+    width: 200px;
+  }
+  &__property-item-info-sign{
+    border: 1px solid $dark-25;
+    color: $dark-25;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: -16px;
+    font-weight: bold;
+    &:hover{
+      .book-room__info-sign-message{
+        display: block;
+        position: absolute;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        color: $dark-75;
+      }
+    }
+  }
+  &__info-sign-message{
+    display: none;
+  }
+  &__result{
+    font-family: $quicksand;
+    color: $dark-100;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  &__result-text{
+    display: flex;
+    flex: 1;
+    &:after{
+      content: '';
+      border-bottom: 1px dotted $dark-25;
+      flex: 1;
+      position: relative;
+      bottom: 5px;
+      left: 4px;
+    }
+  }
+
+  &__result-price{
+    display: flex;
+  }
+  &__action{
+    margin-top: 20px;
+  }
+}
