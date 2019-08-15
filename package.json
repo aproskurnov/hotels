@@ -1,6 +1,7 @@
 {
   "name": "hotels",
   "dependencies": {
+    "@glidejs/glide": "^3.3.0",
     "flatpickr": "^4.6.2",
     "imask": "^5.1.7",
     "jquery": "^3.4.1",

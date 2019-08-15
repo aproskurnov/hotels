@@ -1,0 +1,19 @@
+mixin image-slider(options)
+    div.image-slider
+        div.glide
+            div(class="glide__track" data-glide-el="track")
+                div.glide__slides
+                    img(class="glide__slide" src=require("../components/image-slider/room1.jpg") alt="room1")
+                    img(class="glide__slide" src=require("../components/image-slider/room2.jpg") alt="room2")
+                    img(class="glide__slide" src=require("../components/image-slider/room3.jpg") alt="room3")
+                    img(class="glide__slide" src=require("../components/image-slider/room4.jpg") alt="room4")
+            div(class="glide__arrows" data-glide-el="controls")
+                a(class="glide__arrow glide__arrow_left" data-glide-dir="<")
+                    img(src=require("../components/image-slider/left.svg") alt="left")
+                a(class="glide__arrow glide__arrow_right" data-glide-dir=">")
+                    img(src=require("../components/image-slider/right.svg") alt="right")
+            div(class="glide__bullets" data-glide-el="controls[nav]")
+                button(class="glide__bullet" data-glide-dir="=0")
+                button(class="glide__bullet" data-glide-dir="=1")
+                button(class="glide__bullet" data-glide-dir="=2")
+                button(class="glide__bullet" data-glide-dir="=3")

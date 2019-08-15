@@ -1,0 +1,57 @@
+$glide-modifier-separator: '_';
+
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+//@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
+.image-slider {
+  width: 270px;
+}
+
+.glide{
+  &__arrow_left{
+    left: 1em;
+  }
+  &__arrow_right{
+    right: 1em;
+  }
+
+  &__arrow{
+    position: absolute;
+    display: block;
+    top: 50%;
+    z-index: 2;
+    text-transform: uppercase;
+    padding: 9px 3px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__slide{
+    border-radius: 4px 4px 0 0;
+  }
+  &__bullets{
+    position: absolute;
+    z-index: 2;
+    bottom: 0.7em;
+    right: 5%;
+  }
+  &__bullet{
+    background-color: transparent;
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin: 0 0.15em;
+    &_active{
+      background-color: #fff;
+    }
+  }
+  &_swipeable {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+}

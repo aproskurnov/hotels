@@ -38,6 +38,7 @@ import '../components/login/login.scss'
 import '../components/register/register.scss'
 import '../components/find-room/find-room.scss'
 import '../components/book-room/book-room.scss'
+import '../components/image-slider/image-slider.scss'
 
 //js
 import '../components/dropdown/dropdown'
@@ -47,6 +48,7 @@ import '../components/checkbox-expandable/checkbox-expandable'
 import '../components/radio-button/radio-button'
 import '../components/like-button/like-button'
 import '../components/slider/slider'
+import '../components/image-slider/image-slider'
 
 
 var f = ()=>console.log('hello world');
