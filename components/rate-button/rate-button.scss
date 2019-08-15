@@ -8,7 +8,7 @@
     cursor: pointer;
     color: $purple;
     display: block;
-    width: 20px;
+    width: 24px;
     height: 18px;
 
       &:before {
@@ -18,7 +18,9 @@
         height: 19px;
         background-image: url("./star_off.svg");
       }
-
+  }
+  &:not(.rate-button_disabled){
+    &__element {
       &:hover,
       &:hover ~ label {
         &:before {
@@ -26,6 +28,7 @@
           background-image: url("./star_on.svg");
         }
       }
+    }
   }
   &__input {
     display: none;
@@ -36,6 +39,11 @@
           background-image: url("./star_on.svg");
         }
       }
+    }
+  }
+  &_disabled{
+    .rate-button__element {
+      cursor: default;
     }
   }
 }

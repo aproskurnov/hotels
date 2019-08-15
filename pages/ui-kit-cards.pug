@@ -3,6 +3,7 @@ include ../components/register/register
 include ../components/find-room/find-room
 include ../components/book-room/book-room
 include ../components/image-slider/image-slider
+include ../components/room/room
 
 doctype html
 html(lang=ru)
@@ -23,6 +24,6 @@ html(lang=ru)
                 div(class="content__field")
                     +book-room({})
                 div(class="content__field")
-                    +image-slider({})
+                    +room({id:1, number:888, price: "9 990", rating:5, countReviews:145, isLux:true})
                 div(class="content__field")
-                    +image-slider({})
+                    +room({id:2, number:840, price: "9 990", rating:4, countReviews:65})

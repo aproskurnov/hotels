@@ -39,6 +39,7 @@ import '../components/register/register.scss'
 import '../components/find-room/find-room.scss'
 import '../components/book-room/book-room.scss'
 import '../components/image-slider/image-slider.scss'
+import '../components/room/room.scss'
 
 //js
 import '../components/dropdown/dropdown'

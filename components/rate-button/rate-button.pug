@@ -1,12 +1,19 @@
 mixin rate-button(options)
-    div(class="rate-button")
-        input(class="rate-button__input" type="radio" value="5" name=options.name id=options.name+"-star-5")
+    -
+        var mod = options.disabled?" rate-button_disabled":""
+    div(class="rate-button"+mod)
+        input(class="rate-button__input" type="radio" value="5" checked=options.rating==5?"checked":false
+            name=options.name id=options.name+"-star-5" disabled=options.disabled)
         label(class="rate-button__element" for=options.name+"-star-5")
-        input(class="rate-button__input" type="radio" value="4" name=options.name id=options.name+"-star-4")
+        input(class="rate-button__input" type="radio" value="4" checked=options.rating==4?"checked":false
+            name=options.name id=options.name+"-star-4" disabled=options.disabled)
         label(class="rate-button__element" for=options.name+"-star-4")
-        input(class="rate-button__input" type="radio" value="3" name=options.name id=options.name+"-star-3")
+        input(class="rate-button__input" type="radio" value="3" checked=options.rating==3?"checked":false
+            name=options.name id=options.name+"-star-3" disabled=options.disabled)
         label(class="rate-button__element" for=options.name+"-star-3")
-        input(class="rate-button__input" type="radio" value="2" name=options.name id=options.name+"-star-2")
+        input(class="rate-button__input" type="radio" value="2" checked=options.rating==2?"checked":false
+            name=options.name id=options.name+"-star-2" disabled=options.disabled)
         label(class="rate-button__element" for=options.name+"-star-2")
-        input(class="rate-button__input" type="radio" value="1" name=options.name id=options.name+"-star-1")
+        input(class="rate-button__input" type="radio" value="1" checked=options.rating==1?"checked":false
+            name=options.name id=options.name+"-star-1" disabled=options.disabled)
         label(class="rate-button__element" for=options.name+"-star-1")

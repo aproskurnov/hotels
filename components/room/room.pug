@@ -1,0 +1,23 @@
+include ../image-slider/image-slider
+include ../rate-button/rate-button
+
+mixin room(options)
+    div.room
+        +image-slider({})
+        div.room__description
+            div.room__info
+                div.room__title
+                    div.room__sign="№"
+                    div.room__num=options.number
+                    if (options.isLux)
+                        h3.room__lux="люкс"
+                div.room__price
+                    div.room__value=options.price
+                    div.room__currency="₽"
+                    div.room__perday="в сутки"
+            div.room__reaction
+                div.room__rating
+                    +rate-button({name:"rating"+options.id, disabled:true, rating: options.rating})
+                div.room__review
+                    div.room__count-review=options.countReviews
+                    div.room__text="Отзывов"
