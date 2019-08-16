@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Quicksand';
   src:
-    url('./Quicksand-Regular.woff') format('woff'),
-    url('./Quicksand-Regular.ttf') format('truetype'),
-    url('./Quicksand-Regular.svg') format('svg');
+    url('./quicksand-regular.woff') format('woff'),
+    url('./quicksand-regular.ttf') format('truetype'),
+    url('./quicksand-regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -11,9 +11,9 @@
 @font-face {
   font-family: 'Quicksand';
   src:
-          url('./Quicksand-Bold.woff') format('woff'),
-          url('./Quicksand-Bold.ttf') format('truetype'),
-          url('./Quicksand-Bold.svg') format('svg');
+          url('./quicksand-bold.woff') format('woff'),
+          url('./quicksand-bold.ttf') format('truetype'),
+          url('./quicksand-bold.svg') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -21,9 +21,9 @@
 @font-face {
   font-family: 'Montserrat';
   src:
-    url('./Montserrat-Regular.woff') format('woff'),
-    url('./Montserrat-Regular.ttf') format('truetype'),
-    url('./Montserrat-Regular.svg') format('svg');
+    url('./montserrat-regular.woff') format('woff'),
+    url('./montserrat-regular.ttf') format('truetype'),
+    url('./montserrat-regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,9 +31,29 @@
 @font-face {
   font-family: 'Montserrat';
   src:
-    url('./Montserrat-Bold.woff') format('woff'),
-    url('./Montserrat-Bold.ttf') format('truetype'),
-    url('./Montserrat-Bold.svg') format('svg');
+    url('./montserrat-bold.woff') format('woff'),
+    url('./montserrat-bold.ttf') format('truetype'),
+    url('./montserrat-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Opensans';
+  src:
+          url('./opensans-regular.woff') format('woff'),
+          url('./opensans-regular.ttf') format('truetype'),
+          url('./opensans-regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Opensans';
+  src:
+          url('./opensans-bold.woff') format('woff'),
+          url('./opensans-bold.ttf') format('truetype'),
+          url('./opensans-bold.svg') format('svg');
   font-weight: bold;
   font-style: normal;
 }
