@@ -1,4 +1,4 @@
-include ../input-field/input-field
+include ../input/input
 include ../button/button
 
 mixin login(options)
@@ -6,9 +6,9 @@ mixin login(options)
         h1(class="login__title")='Войти'
         form(class="login__form")
             div(class="login__field")
-                +input-field({placeholder:'Email', type: 'email'})
+                +input({placeholder:'Email', type: 'email'})
             div(class="login__field")
-                +input-field({placeholder:'Пароль', type: 'password'})
+                +input({placeholder:'Пароль', type: 'password'})
             div(class="login__enter")
                 +button({title:'Войти', arrow:true, fullwide: true})
         div(class="login__register")

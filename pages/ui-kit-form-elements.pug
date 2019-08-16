@@ -1,4 +1,4 @@
-include ../components/input-field/input-field
+include ../components/input/input
 include ../components/dropdown/dropdown
 include ../components/dropdown-date-range/dropdown-date-range
 include ../components/checkbox-group/checkbox-group
@@ -24,17 +24,17 @@ html(lang=ru)
         section(class="content")
             div(class="content__column")
                 div(class="content__field")
-                    +input-field({placeholder:'Email', title:'Text field', subtitle:'Default'})
+                    +input({placeholder:'Email', title:'Text field', subtitle:'Default'})
                 div(class="content__field")
-                    +input-field({placeholder:'Email', title:'Text field', subtitle:'Hover/Focus', value:'This is pretty awesome', focusDemoMode:true})
+                    +input({placeholder:'Email', title:'Text field', subtitle:'Hover/Focus', value:'This is pretty awesome', focusDemoMode:true})
                 div(class="content__field")
                     +dropdown({title:'Dropdown3', subtitle:'Default3', type: "bedroom", defaultText: "Не задано", expandable: true})
                 div(class="content__field")
                     +dropdown({title:'Dropdown', subtitle:'Default', type: "guest", defaultText: "Сколько гостей", expandable: true})
                 div(class="content__field")
-                    +input-field({title:'Masked text field', subtitle:'Default', type:'masked'})
+                    +input({title:'Masked text field', subtitle:'Default', type:'masked'})
                 div(class="content__field")
-                    +input-field({placeholder:'Email', title:'Subscription text field', type:'subscription'})
+                    +input({placeholder:'Email', title:'Subscription text field', type:'subscription'})
                 div(class="content__field")
                     +dropdown-date-range({type:'double'})
                 div(class="content__field")

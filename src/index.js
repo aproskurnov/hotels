@@ -11,7 +11,7 @@ import '../components/ui-color/ui-color.scss';
 import '../components/ui-color-rect/ui-color-rect.scss';
 //ui-kit-form-elements
 import '../pages/ui-kit-form-elements.scss'
-import '../components/input-field/input-field.scss';
+import '../components/input/input.scss';
 import '../components/dropdown/dropdown.scss';
 import '../components/round-button/round-button.scss';
 import '../components/dropdown-item/dropdown-item.scss'
@@ -44,7 +44,7 @@ import '../components/room/room.scss'
 //js
 import '../components/dropdown/dropdown'
 import '../components/dropdown-date-range/dropdown-date-range'
-import '../components/input-field/input-field'
+import '../components/input/input'
 import '../components/checkbox-expandable/checkbox-expandable'
 import '../components/radio-button/radio-button'
 import '../components/like-button/like-button'

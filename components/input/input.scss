@@ -1,6 +1,6 @@
 @import "../variables/variables";
 
-.input-field{
+.input{
   position: relative;
   min-width: 320px;
 
@@ -48,13 +48,13 @@
   }
 
   &_focus-demo-mode{
-    .input-field__input{
+    .input__input{
       border-color: $dark-50;
     }
   }
 
   &_subscription{
-    .input-field__subscription-button{
+    .input__subscription-button{
       width: 18px;
       height: 18px;
       position: absolute;
