@@ -3,6 +3,8 @@
 .header{
   display: flex;
   justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px $dark-5;
   &__interface{
     display: flex;
     align-items: center;
@@ -12,9 +14,12 @@
     align-items: center;
   }
   &__menu-element{
-    padding: 0 15px;
+
     &>a{
       color: $dark-50;
+      padding: 26px 15px;
+      display: block;
+      line-height: 17px;
     }
 
     &:hover{
@@ -29,15 +34,17 @@
     &_parent{
       position: relative;
       cursor: pointer;
-      padding-right: 30px;
+      padding: 26px 26px 26px 15px;
+      line-height: 17px;
+      color: $dark-50;
       &:after{
         content: '';
         background-image: url("./expand_more.svg");
         width: 12px;
         height: 8px;
         position: absolute;
-        top: 9px;
-        right: 12px;
+        top: 31px;
+        right: 9px;
       }
       &:hover > .header__submenu{
         display: block;
@@ -58,19 +65,17 @@
     border: 1px solid $dark-10;
     padding: 20px 0;
     left: 0;
-    top: 24px;
+    top: 68px;
     z-index: 3;
   }
   &__submenu-element{
-    padding: 0 20px;
     & > a{
       color: $dark-50;
+      display: block;
+      padding: 15px 40px;
     }
     &:hover{
       background-color: $dark-10;
-    }
-    :not(:first-child){
-      padding-bottom: 5px;
     }
   }
   &__signed-info{

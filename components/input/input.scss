@@ -1,14 +1,11 @@
 @import "../variables/variables";
 
 .input{
-  position: relative;
-  min-width: 320px;
-
   &__input{
     height: 44px;
     width: 100%;
     padding-left: 14px;
-    padding-right: 37px;
+    padding-right: 44px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -46,6 +43,9 @@
       color: $dark-50;
     }
   }
+  &__content{
+    position: relative;
+  }
 
   &_focus-demo-mode{
     .input__input{
@@ -55,13 +55,17 @@
 
   &_subscription{
     .input__subscription-button{
-      width: 18px;
-      height: 18px;
+      width: 44px;
+      height: 44px;
       position: absolute;
-      right: 13px;
-      top: 37px;
+      right: 0;
+      top: 0;
+      border: none;
       cursor: pointer;
+      background-color: transparent;
       background-image: url('./arrow_forward.svg');
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 

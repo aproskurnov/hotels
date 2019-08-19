@@ -4,5 +4,6 @@ mixin button(options)
         buttonClassName += options.theme == 'white' ? " button_theme-white" : ""
         buttonClassName += options.theme == 'light' ? " button_theme-light" : ""
         buttonClassName += options.arrow ? " button_arrow" : ""
+        buttonClassName += options.small ? " button_small" : ""
         buttonClassName += options.fullwide ? " button_fullwide" : ""
     button(class=buttonClassName type="submit" disabled=options.disabled)=options.title

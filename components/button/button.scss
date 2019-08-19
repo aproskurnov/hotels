@@ -5,9 +5,9 @@
   font-family: $montserrat;
   font-size: 12px;
   font-weight: bold;
-  line-height: 24px;
   background: linear-gradient(180deg, $purple 0%, $blue 100%);
-  padding: 10px 20px;
+  padding: 0 20px;
+  height: 44px;
   border-radius: 22px;
   text-transform: uppercase;
   border: none;
@@ -21,7 +21,7 @@
     color: $purple;
     border: 2px solid;
     border-color: $purple;
-    padding: 8px 17px;
+    padding: 0 17px;
   }
 
   &_theme-light{
@@ -33,7 +33,7 @@
     }
   }
   &_arrow{
-    padding: 10px 47px;
+    padding: 0 47px;
     position: relative;
 
     &:after{
@@ -48,6 +48,9 @@
   }
   &_fullwide{
     width: 100%;
+  }
+  &_small{
+    height: 34px;
   }
 
 }

@@ -1,0 +1,13 @@
+include ../components/header/header
+include ../components/footer/footer
+
+doctype html
+html(lang=ru)
+    head
+        meta(CHARSET=UTF-8)
+        title UI kit colors & pages
+
+    body
+        +header({})
+        +header({signedIn:true})
+        +footer({})

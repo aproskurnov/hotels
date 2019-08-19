@@ -39,8 +39,9 @@ import '../components/find-room/find-room.scss'
 import '../components/book-room/book-room.scss'
 import '../components/image-slider/image-slider.scss'
 import '../components/room/room.scss'
-//ui-kit-header
+//ui-kit-headers-footers
 import '../components/header/header.scss'
+import '../components/footer/footer.scss'
 
 //js
 import '../components/dropdown/dropdown'
