@@ -1,4 +1,34 @@
-mixin header
-    div
-        //img(src=require('./logo.png'))
-    div(class=header)
+include ../button/button
+
+mixin header(options)
+    header.header
+        img(class="header__logo" src=require('../components/header/logo.svg') alt="logo")
+        div.header__interface
+            nav.header__menu
+                div.header__menu-element.header__menu-element_active
+                    a(href="/")="Home"
+                div.header__menu-element
+                    a(href="/about")="About Us"
+                div.header__menu-element.header__menu-element_parent="Services"
+                    div.header__submenu
+                        div.header__submenu-element
+                            a(href="/element1")="Element1"
+                        div.header__submenu-element
+                            a(href="/element2")="Element2"
+                        div.header__submenu-element
+                            a(href="/element3")="Element3"
+                div.header__menu-element
+                    a(href="/careers")="Careers"
+                div.header__menu-element
+                    a(href="/news")="News"
+                div.header__menu-element
+                    a(href="/documentation")="Documentation"
+                div.header__menu-expand-button
+            if (options.signedIn)
+                div.header__signed-info="Cosmin Negoita"
+            else
+                div.header__sign-buttons
+                    div.header__sign-in
+                        +button({title: "Login", theme: "white"})
+                    div.header__sign-up
+                        +button({title: "Register"})

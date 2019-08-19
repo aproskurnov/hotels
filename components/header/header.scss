@@ -1,0 +1,82 @@
+@import "../variables/variables";
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  &__interface{
+    display: flex;
+    align-items: center;
+  }
+  &__menu{
+    display: flex;
+    align-items: center;
+  }
+  &__menu-element{
+    padding: 0 15px;
+    &>a{
+      color: $dark-50;
+    }
+
+    &:hover{
+      background-color: $dark-10;
+    }
+    &_active{
+      & > a{
+        font-weight: bold;
+        color: $dark-75;
+      }
+    }
+    &_parent{
+      position: relative;
+      cursor: pointer;
+      padding-right: 30px;
+      &:after{
+        content: '';
+        background-image: url("./expand_more.svg");
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        top: 9px;
+        right: 12px;
+      }
+      &:hover > .header__submenu{
+        display: block;
+      }
+    }
+  }
+  &__sign-buttons{
+    display: flex;
+    margin-left: 15px;
+  }
+  &__sign-up{
+    margin-left: 20px;
+  }
+  &__submenu{
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    border: 1px solid $dark-10;
+    padding: 20px 0;
+    left: 0;
+    top: 24px;
+    z-index: 3;
+  }
+  &__submenu-element{
+    padding: 0 20px;
+    & > a{
+      color: $dark-50;
+    }
+    &:hover{
+      background-color: $dark-10;
+    }
+    :not(:first-child){
+      padding-bottom: 5px;
+    }
+  }
+  &__signed-info{
+    color: $dark-50;
+    padding-left: 30px;
+    margin-left: 15px;
+    border-left: 1px solid $dark-10;
+  }
+}

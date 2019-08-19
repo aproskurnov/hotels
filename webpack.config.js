@@ -78,6 +78,10 @@ module.exports = {
 			filename: "ui-kit-cards.html",
 			template: './pages/ui-kit-cards.pug'
 		}),
+        new HtmlWebpackPlugin({
+            filename: "ui-kit-headers-footers.html",
+            template: './pages/ui-kit-headers-footers.pug'
+        }),
 
 		// new HtmlWebpackPlugin({
 		// 	filename: "test.html",

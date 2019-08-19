@@ -33,13 +33,14 @@ import '../components/property/property.scss'
 import '../components/properties-group/properties-group.scss'
 import '../components/review/review.scss'
 //ui-kit-cards
-
 import '../components/login/login.scss'
 import '../components/register/register.scss'
 import '../components/find-room/find-room.scss'
 import '../components/book-room/book-room.scss'
 import '../components/image-slider/image-slider.scss'
 import '../components/room/room.scss'
+//ui-kit-header
+import '../components/header/header.scss'
 
 //js
 import '../components/dropdown/dropdown'
