@@ -14,19 +14,20 @@ mixin dropdown(options)
                 div(class="dropdown__subtitle")
                     h3=options.subtitle
         div(class="dropdown__select js-dropdown__select")
+            div.dropdown__border
                 div(class="dropdown__value")=options.defaultText
-        if options.type == "bedroom"
-            div(class="dropdown__content")
-                +dropdown-item({title:'спальни'})
-                +dropdown-item({title:'кровати'})
-                +dropdown-item({title:'ванные комнаты'})
-        else if options.type == "guest"
-            div(class="dropdown__content")
-                +dropdown-item({title:'взрослые'})
-                +dropdown-item({title:'дети'})
-                +dropdown-item({title:'младенцы'})
-                div(class="dropdown__actions")
-                    h3
-                        a(class="dropdown-link dropdown-link_cancel dropdown-link_disabled" href="/emptylink")="очистить"
-                    h3
-                        a(class="dropdown-link dropdown-link_ok" href="/emptylink")="применить"
+                if options.type == "bedroom"
+                    div(class="dropdown__content js-dropdown__content")
+                        +dropdown-item({title:'спальни'})
+                        +dropdown-item({title:'кровати'})
+                        +dropdown-item({title:'ванные комнаты'})
+                else if options.type == "guest"
+                    div(class="dropdown__content js-dropdown__content")
+                        +dropdown-item({title:'взрослые'})
+                        +dropdown-item({title:'дети'})
+                        +dropdown-item({title:'младенцы'})
+                        div(class="dropdown__actions")
+                            h3
+                                a(class="dropdown-link dropdown-link_cancel dropdown-link_disabled" href="/emptylink")="очистить"
+                            h3
+                                a(class="dropdown-link dropdown-link_ok" href="/emptylink")="применить"

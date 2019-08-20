@@ -50,7 +50,7 @@ let singleSettings = {
                 });
                 dateStr = dates[0];
                 dateStr += (dates.length > 1)?(" - "+dates[1]):"";
-                instance.element.firstElementChild.innerHTML = dateStr;
+                instance.element.firstElementChild.firstElementChild.innerHTML = dateStr;
                 instance.close();
             }
         };
@@ -76,15 +76,15 @@ let splittedSettings =  {
         let fOk = function(){
             if (instance.selectedDates.length > 1){
                 let e = instance.element.closest('.js-dropdown-date-range_splitted').querySelectorAll('.js-dropdown__select');
-                e.item(0).firstElementChild.innerHTML = instance.formatDate(instance.selectedDates[0], instance.config.dateFormat);
-                e.item(1).firstElementChild.innerHTML = instance.formatDate(instance.selectedDates[1], instance.config.dateFormat);
+                e.item(0).firstElementChild.firstElementChild.innerHTML = instance.formatDate(instance.selectedDates[0], instance.config.dateFormat);
+                e.item(1).firstElementChild.firstElementChild.innerHTML = instance.formatDate(instance.selectedDates[1], instance.config.dateFormat);
                 instance.close();
             }
         };
         let fCancel = function(){
             let e = instance.element.closest('.js-dropdown-date-range_splitted').querySelectorAll('.js-dropdown__select');
             Object.values(e).map(function(v, i){
-                v.firstElementChild.innerHTML = 'ДД.ММ.ГГГГ';
+                v.firstElementChild.firstElementChild.innerHTML = 'ДД.ММ.ГГГГ';
             });
             instance.clear();
         };
@@ -106,11 +106,11 @@ let doubleSettings = {
 
         let fOk = function(){
             dateStr = instance.formatDate(instance.selectedDates[0], instance.config.dateFormat);
-            instance.element.firstElementChild.innerHTML = dateStr;
+            instance.element.firstElementChild.firstElementChild.innerHTML = dateStr;
             instance.close();
         };
         let fCancel = function(){
-            instance.element.firstElementChild.innerHTML = 'ДД.ММ.ГГГГ';
+            instance.element.firstElementChild.firstElementChild.innerHTML = 'ДД.ММ.ГГГГ';
             instance.clear();
         };
 

@@ -2,11 +2,24 @@ function pluralize(count, base, singular, plural1, plural2) {
     return count + ' ' + base + ( ( count = (count %= 100) > 20 ? count % 10 : count ) === 0 || count > 4 ? plural2 : count > 1 ? plural1 : singular );
 }
 
+
+document.addEventListener('click', function(e) {
+    elements = document.querySelectorAll('.js-dropdown.dropdown_expanded');
+    Object.values(elements).map(function(v,i){
+        if (!v.contains(e.target)){
+            v.classList.remove('dropdown_expanded');
+        }
+    });
+});
+
 var dropdowns = document.querySelectorAll('.js-dropdown_expandable');
 for (let d of dropdowns){
     let el = d.getElementsByClassName('js-dropdown__select').item(0);
-    el.addEventListener('click', function(){
-        d.classList.toggle('dropdown_expanded')
+    el.addEventListener('click', function(e){
+        let content = el.querySelector('.js-dropdown__content');
+        if(!content.contains(e.target)){
+            d.classList.toggle('dropdown_expanded')
+        }
     })
 }
 
