@@ -1,7 +1,7 @@
 //css
 
 //ui-kit-colors-type
-import '../pages/ui-kit-colors-type.scss'
+import '../pages/layout.scss'
 import '../components/fonts/fonts.scss';
 import '../components/global/global.scss';
 import '../components/header/header.scss';
@@ -10,7 +10,6 @@ import '../components/ui-header/ui-header.scss';
 import '../components/ui-color/ui-color.scss';
 import '../components/ui-color-rect/ui-color-rect.scss';
 //ui-kit-form-elements
-import '../pages/ui-kit-form-elements.scss'
 import '../components/input/input.scss';
 import '../components/dropdown/dropdown.scss';
 import '../components/round-button/round-button.scss';
@@ -52,6 +51,7 @@ import '../components/radio-button/radio-button'
 import '../components/like-button/like-button'
 import '../components/slider/slider'
 import '../components/image-slider/image-slider'
+import '../components/header/header'
 
 
 var f = ()=>console.log('hello world');

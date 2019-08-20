@@ -1,20 +1,52 @@
 @import "../variables/variables";
 
 .header{
-  display: flex;
-  justify-content: space-between;
   background: #FFFFFF;
   box-shadow: 0 10px 20px $dark-5;
+  &__content{
+    margin: 0 auto;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__interface{
     display: flex;
     align-items: center;
   }
+  &__logo-wrapper{
+    display: flex;
+  }
+  &__logo{
+    padding: 15px 15px;
+  }
   &__menu{
     display: flex;
     align-items: center;
+    @media(max-width:977px){
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 10;
+      padding-bottom: 40px;
+      border-top: 1px solid $dark-10;
+      border-bottom: 1px solid $dark-10;
+    }
+    &_expanded{
+      @media(max-width:977px){
+        display: flex;
+      }
+    }
   }
   &__menu-element{
-
+    @media(max-width:977px) {
+      width: 100%;
+      text-align: center;
+    }
     &>a{
       color: $dark-50;
       padding: 26px 15px;
@@ -31,12 +63,36 @@
         color: $dark-75;
       }
     }
+    &_expanded{
+      & > .header__submenu{
+        display: block;
+      }
+      @media(max-width:977px) {
+        &.header__menu-element_parent:after{
+          -webkit-transform: rotate(0deg);
+          -moz-transform:    rotate(0deg);
+          -ms-transform:     rotate(0deg);
+          -o-transform:      rotate(0deg);
+          transform:         rotate(0deg);
+        }
+      }
+    }
     &_parent{
       position: relative;
       cursor: pointer;
       padding: 26px 26px 26px 15px;
       line-height: 17px;
       color: $dark-50;
+      @media(max-width:977px) {
+        padding: 26px 0;
+        &:after{
+          -webkit-transform: rotate(-90deg);
+          -moz-transform:    rotate(-90deg);
+          -ms-transform:     rotate(-90deg);
+          -o-transform:      rotate(-90deg);
+          transform:         rotate(-90deg);
+        }
+      }
       &:after{
         content: '';
         background-image: url("./expand_more.svg");
@@ -47,16 +103,9 @@
         right: 9px;
       }
       &:hover > .header__submenu{
-        display: block;
+        //display: block;
       }
     }
-  }
-  &__sign-buttons{
-    display: flex;
-    margin-left: 15px;
-  }
-  &__sign-up{
-    margin-left: 20px;
   }
   &__submenu{
     position: absolute;
@@ -67,21 +116,84 @@
     left: 0;
     top: 68px;
     z-index: 3;
+    @media(max-width:977px) {
+      position: relative;
+      top: 28px;
+      border: none;
+    }
   }
   &__submenu-element{
     & > a{
       color: $dark-50;
       display: block;
       padding: 15px 40px;
+      @media(max-width:977px) {
+        padding: 15px 0 15px 100px;
+      }
+
     }
     &:hover{
       background-color: $dark-10;
     }
   }
+  &__menu-expand-button{
+    display: none;
+    cursor: pointer;
+    margin-right: 15px;
+    @media(max-width:977px) {
+      display: inline-block;
+    }
+    &_expanded{
+      .header__menu-expand-bar1{
+        -webkit-transform: rotate(-45deg) translate(-4px, 5px) ;
+        -moz-transform:    rotate(-45deg) translate(-4px, 5px) ;
+        -ms-transform:     rotate(-45deg) translate(-4px, 5px) ;
+        -o-transform:      rotate(-45deg) translate(-4px, 5px) ;
+        transform:         rotate(-45deg) translate(-4px, 5px) ;
+      }
+      .header__menu-expand-bar2{
+        opacity: 0;
+      }
+      .header__menu-expand-bar3{
+        -webkit-transform: rotate(45deg) translate(-6px, -8px) ;
+        -moz-transform:    rotate(45deg) translate(-6px, -8px) ;
+        -ms-transform:     rotate(45deg) translate(-6px, -8px) ;
+        -o-transform:      rotate(45deg) translate(-6px, -8px) ;
+        transform: rotate(45deg) translate(-6px, -8px) ;
+      }
+    }
+  }
+  &__menu-expand-bar1,
+  &__menu-expand-bar2,
+  &__menu-expand-bar3{
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
   &__signed-info{
     color: $dark-50;
-    padding-left: 30px;
+    padding: 0 15px 0 30px;
     margin-left: 15px;
     border-left: 1px solid $dark-10;
+    @media(max-width:977px) {
+      color: $dark-100;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  }
+  &__sign-buttons{
+    display: flex;
+    padding: 0 15px;
+    @media(max-width:977px) {
+      margin-top: 20px;
+    }
+
+  }
+  &__sign-up{
+    margin-left: 20px;
   }
 }

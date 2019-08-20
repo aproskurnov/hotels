@@ -63,10 +63,6 @@ module.exports = {
 			'window.jQuery': 'jquery'
 		}),
 		new HtmlWebpackPlugin({
-			filename: "index.html",
-			template: './pages/index.pug'
-		}),
-		new HtmlWebpackPlugin({
 			filename: "ui-kit-colors-type.html",
 			template: './pages/ui-kit-colors-type.pug'
 		}),
@@ -82,11 +78,10 @@ module.exports = {
             filename: "ui-kit-headers-footers.html",
             template: './pages/ui-kit-headers-footers.pug'
         }),
-
-		// new HtmlWebpackPlugin({
-		// 	filename: "test.html",
-		// 	template: './pages/test.pug'
-		// }),
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: './pages/index.pug'
+        }),
 	]
 };
 

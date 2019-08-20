@@ -2,47 +2,58 @@ include ../input/input
 
 mixin footer(optoins)
     footer.footer
-        div.footer__multicolumn
-            div.footer__interface
-                div.footer__column
-                    img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
-                    p.footer__text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-                div.footer__column
-                    div.footer__title-elements="Navigation"
-                    div.footer__element
-                        a(href="/about")="About Us"
-                    div.footer__element
-                        a(href="/news")="News"
-                    div.footer__element
-                        a(href="/support")="Support"
-                    div.footer__element
-                        a(href="/products")="Products"
-                div.footer__column
-                    div.footer__title-elements="About us"
-                    div.footer__element
-                        a(href="/whoweare")="Who we are"
-                    div.footer__element
-                        a(href="/ourteam")="Our team"
-                    div.footer__element
-                        a(href="/careers")="Careers"
-                    div.footer__element
-                        a(href="/investors")="Investors"
-                div.footer__column
-                    div.footer__title-elements="Support"
-                    div.footer__element
-                        a(href="/documentation")="Documentation"
-                    div.footer__element
-                        a(href="/community")="Community"
-                    div.footer__element
-                        a(href="/getintouch")="Get in touch"
-                div.footer__column
-                    div.footer__title-elements="Subscribe to our newsletter"
-                    p.footer__text="Receive our latest news and promotions in your inbox!"
-                    div.footer__element
-                        form
-                            +input({placeholder:'Your email address', type: 'email', name: 'email', required:true, subscription:true})
-            div.footer__added
-                div.footer__copyright-text="Copyright © 2018 Toxin UI Kit. All rights reserved."
+        footer.footer__content
+            div.footer__multicolumn
+                div.footer__interface
+                    div.footer__column
+                        img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
+                        p.footer__text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+                    div.footer__column
+                        div.footer__title-elements="Navigation"
+                        div.footer__element
+                            a(href="/about")="About Us"
+                        div.footer__element
+                            a(href="/news")="News"
+                        div.footer__element
+                            a(href="/support")="Support"
+                        div.footer__element
+                            a(href="/products")="Products"
+                    div.footer__column
+                        div.footer__title-elements="About us"
+                        div.footer__element
+                            a(href="/whoweare")="Who we are"
+                        div.footer__element
+                            a(href="/ourteam")="Our team"
+                        div.footer__element
+                            a(href="/careers")="Careers"
+                        div.footer__element
+                            a(href="/investors")="Investors"
+                    div.footer__column
+                        div.footer__title-elements="Support"
+                        div.footer__element
+                            a(href="/documentation")="Documentation"
+                        div.footer__element
+                            a(href="/community")="Community"
+                        div.footer__element
+                            a(href="/getintouch")="Get in touch"
+                    div.footer__column
+                        div.footer__title-elements="Subscribe to our newsletter"
+                        p.footer__text="Receive our latest news and promotions in your inbox!"
+                        div.footer__element
+                            form
+                                +input({placeholder:'Your email address', type: 'email', name: 'email', required:true, subscription:true})
+                div.footer__added
+                    div.footer__copyright-text="Copyright © 2018 Toxin UI Kit. All rights reserved."
+                    div.footer__socials
+                        a(href="http://twitter.com")
+                            img(class="footer__twitter" src=require('../components/footer/tw.svg') alt="twitter")
+                        a(href="http://facebook.com")
+                            img(class="footer__facebook" src=require('../components/footer/fb.svg') alt="facebook")
+                        a(href="http://instagram.com")
+                            img(class="footer__instagram" src=require('../components/footer/in.svg') alt="instagram")
+            div.footer__single
+                img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
+                p.footer__single-text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
                 div.footer__socials
                     a(href="http://twitter.com")
                         img(class="footer__twitter" src=require('../components/footer/tw.svg') alt="twitter")
@@ -50,13 +61,3 @@ mixin footer(optoins)
                         img(class="footer__facebook" src=require('../components/footer/fb.svg') alt="facebook")
                     a(href="http://instagram.com")
                         img(class="footer__instagram" src=require('../components/footer/in.svg') alt="instagram")
-        div.footer__single
-            img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
-            p.footer__single-text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-            div.footer__socials
-                a(href="http://twitter.com")
-                    img(class="footer__twitter" src=require('../components/footer/tw.svg') alt="twitter")
-                a(href="http://facebook.com")
-                    img(class="footer__facebook" src=require('../components/footer/fb.svg') alt="facebook")
-                a(href="http://instagram.com")
-                    img(class="footer__instagram" src=require('../components/footer/in.svg') alt="instagram")

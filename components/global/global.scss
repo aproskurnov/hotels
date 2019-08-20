@@ -1,5 +1,15 @@
 @import "../variables/variables";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 body{
   font-family: $montserrat;
   font-size: 14px;

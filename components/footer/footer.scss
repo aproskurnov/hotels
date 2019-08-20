@@ -1,12 +1,13 @@
 @import "../variables/variables";
 
-.wrapper{
-  margin: 0 140px;
-}
-
 .footer{
   background: #FFFFFF;
   box-shadow: 0 10px 20px $dark-10;
+  &__content{
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1160px;
+  }
   &__multicolumn{
     @media (max-width: 1156px) {
       display: none;
