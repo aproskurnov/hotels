@@ -2,48 +2,49 @@ include ../input/input
 
 mixin footer(optoins)
     footer.footer
-        footer.footer__content
-            div.footer__multicolumn
-                div.footer__interface
+        div.footer__multicolumn
+            div.footer__interface
+                div.footer__content
                     div.footer__column
                         img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
-                        p.footer__text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+                        p.footer__text="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
                     div.footer__column
-                        div.footer__title-elements="Navigation"
+                        div.footer__title-elements="Навигация"
                         div.footer__element
-                            a(href="/about")="About Us"
+                            a(href="/about")="О нас"
                         div.footer__element
-                            a(href="/news")="News"
+                            a(href="/news")="Новости"
                         div.footer__element
-                            a(href="/support")="Support"
+                            a(href="/support")="Служба поддержки"
                         div.footer__element
-                            a(href="/products")="Products"
+                            a(href="/products")="Услуги"
                     div.footer__column
-                        div.footer__title-elements="About us"
+                        div.footer__title-elements="О нас"
                         div.footer__element
-                            a(href="/whoweare")="Who we are"
+                            a(href="/whoweare")="О сервисе"
                         div.footer__element
-                            a(href="/ourteam")="Our team"
+                            a(href="/ourteam")="Наша команда"
                         div.footer__element
-                            a(href="/careers")="Careers"
+                            a(href="/careers")="Вакансии"
                         div.footer__element
-                            a(href="/investors")="Investors"
+                            a(href="/investors")="Инвесторы"
                     div.footer__column
-                        div.footer__title-elements="Support"
+                        div.footer__title-elements="Служба поддержки"
                         div.footer__element
-                            a(href="/documentation")="Documentation"
+                            a(href="/documentation")="Соглашения"
                         div.footer__element
-                            a(href="/community")="Community"
+                            a(href="/community")="Сообщества"
                         div.footer__element
-                            a(href="/getintouch")="Get in touch"
+                            a(href="/getintouch")="Связь с нами"
                     div.footer__column
-                        div.footer__title-elements="Subscribe to our newsletter"
-                        p.footer__text="Receive our latest news and promotions in your inbox!"
+                        div.footer__title-elements="Подписка"
+                        p.footer__text="Получайте специальные предложения и новости сервиса"
                         div.footer__element
                             form
-                                +input({placeholder:'Your email address', type: 'email', name: 'email', required:true, subscription:true})
-                div.footer__added
-                    div.footer__copyright-text="Copyright © 2018 Toxin UI Kit. All rights reserved."
+                                +input({placeholder:'Email', type: 'email', name: 'email', required:true, subscription:true})
+            div.footer__added
+                div.footer__content
+                    div.footer__copyright-text="Copyright © 2018 Toxin отель. Все права зачищены."
                     div.footer__socials
                         a(href="http://twitter.com")
                             img(class="footer__twitter" src=require('../components/footer/tw.svg') alt="twitter")
@@ -51,9 +52,9 @@ mixin footer(optoins)
                             img(class="footer__facebook" src=require('../components/footer/fb.svg') alt="facebook")
                         a(href="http://instagram.com")
                             img(class="footer__instagram" src=require('../components/footer/in.svg') alt="instagram")
-            div.footer__single
+        div.footer__single
                 img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
-                p.footer__single-text="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+                p.footer__single-text="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
                 div.footer__socials
                     a(href="http://twitter.com")
                         img(class="footer__twitter" src=require('../components/footer/tw.svg') alt="twitter")

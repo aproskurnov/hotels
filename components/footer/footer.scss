@@ -3,10 +3,15 @@
 .footer{
   background: #FFFFFF;
   box-shadow: 0 10px 20px $dark-10;
+  border-top: 1px solid $dark-10;
+  margin-top: 2px;
   &__content{
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
   &__multicolumn{
     @media (max-width: 1156px) {
@@ -22,11 +27,13 @@
   &__interface{
     display: flex;
     justify-content: space-between;
-    padding: 100px 0;
+    padding: 100px 0 93px;
   }
   &__text{
     max-width: 260px;
     padding-right: 5%;
+    margin-top: 13px;
+    margin-bottom: 23px;
   }
 
   &__column{
@@ -43,7 +50,7 @@
   &__added{
     display: flex;
     justify-content: space-between;
-    padding: 26px 0;
+    padding: 24px 0;
     border-top: 1px solid $dark-5;
   }
   &__single{
