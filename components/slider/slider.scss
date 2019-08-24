@@ -6,11 +6,10 @@ html:not([dir="rtl"]) .slider .noUi-horizontal .noUi-handle {
 }
 
 .slider{
-  min-width: 400px;
   &__titles{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 17px;
+    margin-bottom: 23px;
   }
   &__subtitle{
     h3{
@@ -47,5 +46,11 @@ html:not([dir="rtl"]) .slider .noUi-horizontal .noUi-handle {
       }
 
     }
+  }
+
+  &__description{
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 14px;
   }
 }

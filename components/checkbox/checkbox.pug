@@ -3,8 +3,8 @@ mixin checkbox(options)
         var mainClass = "checkbox"
         if (options.title) mainClass += " checkbox_rich"
     label(class=mainClass)
-        <input class="checkbox__input" type="checkbox" name="checkbox-test">
-        <div class="checkbox__element"></div>
+        input(class="checkbox__input" type="checkbox" name="checkbox-test" checked=options.checked)
+        div.checkbox__element
         div(class="checkbox__label")
             if (options.title)
                 div(class="checkbox__title")=options.title

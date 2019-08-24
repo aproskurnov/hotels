@@ -1,7 +1,9 @@
 include ../checkbox/checkbox
 
 mixin checkbox-group(options)
-    div(class="checkbox-group")
+    -
+        let mod = options.type == "rich"?" checkbox-group_rich":""
+    div(class="checkbox-group" + mod)
         div(class="checkbox-group__title")
             h3=options.title
         each obj in options.data
