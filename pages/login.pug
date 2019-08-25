@@ -1,0 +1,18 @@
+include ../components/header/header
+include ../components/footer/footer
+include ../components/login/login
+
+
+doctype html
+html(lang=ru)
+    head
+        meta(CHARSET=UTF-8)
+        meta(name="viewport" content="width=device-width")
+        title Registration
+    body
+        div.layout
+            +header({})
+            section.layout__content.layout__content_image2-background
+                div.layout__wrapper.layout__wrapper_login
+                    +login({})
+            +footer({})

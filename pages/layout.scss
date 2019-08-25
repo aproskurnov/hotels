@@ -16,6 +16,13 @@
         height: auto;
       }
     }
+    &_image2-background{
+      background-image: url("./image2.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-width: none;
+    }
     flex-grow: 1;
     max-width: 1190px;
     &_centered{
@@ -39,6 +46,16 @@
     margin: 0 auto;
     padding: 70px 15px 20px 15px;
     height: 100%;
+    &_registration{
+      padding: 30px 15px;
+      align-items: center;
+      justify-content: center;
+    }
+    &_login{
+      padding: 163px 15px;
+      align-items: center;
+      justify-content: center;
+    }
     @media (max-width: 379px) {
       padding: 30px 0;
     }
@@ -114,4 +131,5 @@
     justify-content: center;
     margin: 20px 0 70px;
   }
+
 }

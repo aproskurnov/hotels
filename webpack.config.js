@@ -86,6 +86,14 @@ module.exports = {
             filename: "searchroom.html",
             template: './pages/searchroom.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: "registration.html",
+            template: './pages/registration.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "login.html",
+            template: './pages/login.pug'
+        }),
 	]
 };
 
