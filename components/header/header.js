@@ -30,6 +30,7 @@ document.addEventListener('click', function(e) {
 
         if (!v.contains(e.target) && !(btn.contains(e.target))){
             v.classList.remove('header__menu_expanded');
+            btn.classList.remove('header__menu-expand-button_expanded');
         }
     });
 });
