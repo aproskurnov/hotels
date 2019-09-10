@@ -1,0 +1,25 @@
+include ../components/header/header
+include ../components/footer/footer
+include ../components/chart/chart
+
+
+doctype html
+html(lang=ru)
+    head
+        meta(CHARSET=UTF-8)
+        meta(name="viewport" content="width=device-width")
+        title="Room details page"
+    body
+        div.layout
+            +header({})
+            section.layout__content.layout__content_centered
+                div.layout__page-content
+                    +chart({
+                        title: "Впечатления от номера",
+                        data:[
+                            {votes: 540, title: "Великолепно", color: "#FFE39C"},
+                            {votes: 260, title: "Хорошо", color: "#6FCF97"},
+                            {votes: 260, title: "Удовлетворительно", color: "#BC9CFF"},
+                            {votes: 0, title: "Разочарован", color: "#3D4975"},
+                    ]})
+            +footer({})

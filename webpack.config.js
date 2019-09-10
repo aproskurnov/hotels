@@ -94,6 +94,10 @@ module.exports = {
             filename: "login.html",
             template: './pages/login.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: "details-room.html",
+            template: './pages/details-room.pug'
+        }),
 	]
 };
 

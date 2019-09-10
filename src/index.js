@@ -41,6 +41,8 @@ import '../components/room/room.scss'
 //ui-kit-headers-footers
 import '../components/header/header.scss'
 import '../components/footer/footer.scss'
+//
+import '../components/chart/chart.scss'
 
 //js
 import '../components/dropdown/dropdown'
@@ -52,6 +54,7 @@ import '../components/like-button/like-button'
 import '../components/slider/slider'
 import '../components/image-slider/image-slider'
 import '../components/header/header'
+import '../components/chart/chart'
 
 
 var f = ()=>console.log('hello world');

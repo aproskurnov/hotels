@@ -1,0 +1,77 @@
+@import "../variables/variables";
+
+.chart{
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__content{
+    display: flex;
+  }
+  &__box{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 45px;
+  }
+  &__circle:hover{
+    stroke-width: 10;
+  }
+  &__center{
+    position: absolute;
+    top: 34px;
+    left: 34px;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    &_0{
+      color: $yellow;
+    }
+    &_1{
+      color: $green;
+    }
+    &_2{
+      color: $purple;
+    }
+    &_3{
+      color: $dark-blue;
+    }
+  }
+  &__votes{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  &__votes-text{
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__list{
+    align-self: flex-end;
+  }
+  &__list-element{
+    position: relative;
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 7px;
+      left: -16px;
+      border-radius: 50%;
+    }
+    &_0:before{
+      background: linear-gradient(180deg, $yellow 0%, $orange 100%);
+    }
+    &_1:before{
+      background: linear-gradient(180deg, $green 0%, $light-blue 100%);
+    }
+    &_2:before{
+      background: linear-gradient(180deg, $purple 0%, $blue 100%);
+    }
+    &_3:before{
+      background: linear-gradient(180deg, $grey 0%, $dark-blue 100%);
+    }
+  }
+}
