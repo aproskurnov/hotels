@@ -148,6 +148,9 @@ div.flatpickr-calendar{
     .flatpickr-btn-ok,
     .flatpickr-btn-cancel{
       cursor: pointer;
+      &:hover{
+        color: $dark-blue;
+      }
     }
   }
 
