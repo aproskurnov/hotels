@@ -3,6 +3,7 @@
 .checkbox{
   display: flex;
   align-items: flex-start;
+  cursor: pointer;
   &__input{
     display: none;
     &:checked + .checkbox__element {
