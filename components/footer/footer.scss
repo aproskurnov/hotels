@@ -46,6 +46,11 @@
     & > a{
       color: $dark-50;
     }
+    &:hover{
+      & > a{
+        color: $dark-blue;
+      }
+    }
   }
   &__added{
     display: flex;
