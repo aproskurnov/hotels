@@ -190,10 +190,15 @@
     padding: 0 15px;
     @media(max-width:977px) {
       margin-top: 20px;
+      flex-direction: column;
+      text-align: center;
     }
 
   }
   &__sign-up{
     margin-left: 20px;
+    @media(max-width:977px) {
+      margin-top: 20px;
+    }
   }
 }
