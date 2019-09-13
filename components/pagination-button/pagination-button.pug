@@ -2,9 +2,9 @@ mixin pagination-button(options)
     -
         options.link = options.link || '/emptylink'
         var mod = '';
-        if (options.type == "current") mod = 'pagination-button_current';
-        if (options.type == "next") mod = 'pagination-button_next';
-        if (options.type == "middle") mod = 'pagination-button_middle';
-        if (options.clickable) mod += 'pagination-button_clickable'
+        if (options.type == "current") mod += 'pagination-button_current';
+        if (options.type == "next") mod += 'pagination-button_next';
+        if (options.type == "middle") mod += 'pagination-button_middle';
+        if (options.clickable) mod += ' pagination-button_clickable'
     div(class="pagination-button " + mod)
             a(class="pagination-button__value" href=options.clickable?options.link:false)=options.val
