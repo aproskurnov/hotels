@@ -33,4 +33,4 @@ mixin register(options)
                 +button({title:'Зарегистрироваться', arrow:true, fullwide: true})
         div(class="register__login")
             div(class="register__login-text")='Уже есть аккаунт на Toxin?'
-            +button({title:'Войти', theme:"white"})
+            +button({title:'Войти', theme:"white", type: "link", href: "/login.html"})
