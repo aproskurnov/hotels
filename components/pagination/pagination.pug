@@ -13,11 +13,11 @@ mixin pagination(options)
                     +pagination-button({val:'...', type:"middle"})
                     - i++;
                 else if (i == c-1)
-                    +pagination-button({val:options.count})
+                    +pagination-button({val:options.count, clickable: true})
                     - i++;
                 else if (i == c)
-                    +pagination-button({val:'', type:"next"})
+                    +pagination-button({val:'', type:"next", clickable: true})
                     - i++;
                 else
-                    +pagination-button({val:i++})
+                    +pagination-button({val:i++, clickable: true})
         div(class="pagination__title")='1 – 12 из 100+ вариантов аренды'
