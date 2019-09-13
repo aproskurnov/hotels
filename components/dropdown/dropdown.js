@@ -1,11 +1,8 @@
-function pluralize(count, base, singular, plural1, plural2) {
-    return count + ' ' + base + ( ( count = (count %= 100) > 20 ? count % 10 : count ) === 0 || count > 4 ? plural2 : count > 1 ? plural1 : singular );
-}
-
+import {pluralize} from '../../src/lib/utils'
 
 document.addEventListener('click', function(e) {
     elements = document.querySelectorAll('.js-dropdown.dropdown_expanded');
-    Object.values(elements).map(function(v,i){
+    Object.values(elements).map(function(v){
         if (!v.contains(e.target)){
             v.classList.remove('dropdown_expanded');
         }
@@ -42,15 +39,15 @@ function recalcBedroom(dropdown){
         count += n;
         switch (c) {
             case 1:
-                res += pluralize(n, 'спал', 'ьня', 'ьни', 'ен');
+                res += count + ' ' + pluralize(n, 'спал', 'ьня', 'ьни', 'ен');
                 break;
             case 2:
                 res += ', ';
-                res += pluralize(n, 'кроват', 'ь', 'и', 'ей');
+                res += count + ' ' + pluralize(n, 'кроват', 'ь', 'и', 'ей');
                 break;
             case 3:
                 res += ', ';
-                res += pluralize(n, 'ванн', 'ая комната', 'ых комнаты', 'ых комнат');
+                res += count + ' ' + pluralize(n, 'ванн', 'ая комната', 'ых комнаты', 'ых комнат');
                 break;
         }
         c++;
@@ -113,7 +110,7 @@ for( let el of ok ){
         let count = calcVal(dropdown);
 
         if (count > 0){
-            dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = pluralize(count, 'Гост', 'ь','я', 'ей');
+            dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = count + ' ' + pluralize(count, 'Гост', 'ь','я', 'ей');
             dropdown.getElementsByClassName('dropdown-link_cancel').item(0).classList.remove('dropdown-link_disabled')
         }
         dropdown.classList.toggle('dropdown_expanded');
@@ -126,7 +123,6 @@ for( let el of cancel ){
         e.preventDefault();
         let dropdown = this.closest('.dropdown');
         let vals = dropdown.getElementsByClassName('dropdown-item__value');
-        let count = 0;
         for( let v of vals){
             v.innerHTML = 0;
         }

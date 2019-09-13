@@ -1,12 +1,10 @@
-function pluralize(count, base, singular, plural1, plural2) {
-    return base + ( ( count = (count %= 100) > 20 ? count % 10 : count ) === 0 || count > 4 ? plural2 : count > 1 ? plural1 : singular );
-}
+import {pluralize} from '../../src/lib/utils'
+
 let chart = document.querySelector('.js-chart');
 let data = JSON.parse(chart.getAttribute('data'));
-let sumVotes = chart.getAttribute('data-sum-votes');
 
 let titles = document.querySelectorAll('.js-chart__list-element');
-Object.values(titles).map((v,i,arr)=>{
+Object.values(titles).map((v,i)=>{
 
     let el = data[i];
     let circle = document.querySelector('.js-chart__circle'+i);
@@ -15,7 +13,7 @@ Object.values(titles).map((v,i,arr)=>{
     let centerVotes = center.querySelector('.js-chart__votes');
     let centerText = center.querySelector('.js-chart__votes-text');
 
-    v.addEventListener('mouseover', (e)=>{
+    v.addEventListener('mouseover', ()=>{
         changeLength(el, circle, 55, 10);
         center.classList.toggle('chart__center_'+i);
 
@@ -23,7 +21,7 @@ Object.values(titles).map((v,i,arr)=>{
         centerText.innerHTML = pluralize(el.votes, 'голос', '', 'а', 'ов');
     });
 
-    v.addEventListener('mouseout', (e)=>{
+    v.addEventListener('mouseout', ()=>{
         changeLength(el, circle, 58, 4);
         center.classList.toggle('chart__center_'+i);
 
