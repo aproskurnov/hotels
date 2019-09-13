@@ -27,7 +27,7 @@
     background: linear-gradient(180deg, $green 0%, $light-blue 100%);
     position: relative;
 
-    &:after{
+    .pagination-button__value:after{
       content: '';
       background-image: url("./arrow_forward.svg");
       position: absolute;
