@@ -1,6 +1,6 @@
-let btns = document.getElementsByClassName('js-like-button');
-Object.values(btns).map(function(e, i, a){
-    e.addEventListener('click', function(){
-        e.classList.toggle('like-button_checked')
+let btns = document.querySelectorAll('.js-like-button');
+Object.values(btns).map(function(v){
+    v.addEventListener('click', function(){
+        v.classList.toggle('like-button_checked')
     })
 });
