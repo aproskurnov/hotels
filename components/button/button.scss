@@ -15,6 +15,11 @@
   &:disabled{
     opacity: 0.5;
   }
+  &:hover{
+    background-image: none;
+    background-color: rgba($dark-blue, 1);
+    color: $white;
+  }
 
   &_theme-white{
     background: #ffffff;
@@ -22,6 +27,11 @@
     border: 2px solid;
     border-color: $purple;
     padding: 10px 17px;
+
+    &:hover{
+      border: none;
+      padding: 12px 19px;
+    }
   }
 
   &_theme-light{
@@ -33,7 +43,7 @@
     }
   }
   &_arrow{
-    padding: 10px 47px;
+    padding: 14px 47px;
     position: relative;
 
     &:after{
