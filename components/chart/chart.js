@@ -1,7 +1,10 @@
 import {pluralize} from '../../src/lib/utils'
 
 let chart = document.querySelector('.js-chart');
-let data = JSON.parse(chart.getAttribute('data'));
+let data;
+if (chart){
+     data = JSON.parse(chart.getAttribute('data'));
+}
 
 let titles = document.querySelectorAll('.js-chart__list-element');
 Object.values(titles).map((v,i)=>{
