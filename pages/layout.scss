@@ -36,6 +36,10 @@
         flex-wrap: wrap;
       }
     }
+    &_details-room{
+      display: flex;
+      margin-top: 70px;
+    }
   }
   &__wrapper{
     display: flex;
@@ -107,6 +111,13 @@
 
   &__page-content{
     padding: 0 15px;
+    &_detail-room{
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 425px) {
+        padding: 0;
+      }
+    }
   }
   &__page-title{
     @media (max-width: 910px) {
@@ -131,5 +142,81 @@
     justify-content: center;
     margin: 20px 0 70px;
   }
+
+
+  &__main-image{
+    width: 100%;
+  }
+  &__details-room-main-part{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__details-room-properties{
+    @media (max-width: 1022px) {
+      margin: 0 auto;
+    }
+  }
+  &__details-room-chart{
+    @media (max-width: 1022px) {
+      margin: 0 auto;
+    }
+  }
+  &__images{
+    display: flex;
+    margin: 0 auto;
+  }
+  &__images-small{
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1455px) {
+      display: none;
+    }
+  }
+  &__details-room-inner{
+    width: 60%;
+    @media (max-width: 1130px) {
+      margin: 0 auto;
+    }
+    @media (max-width: 425px) {
+      padding: 0 15px;
+    }
+  }
+  &__details-room-reviews-part{
+    margin-top: 30px;
+  }
+  &__page-aside{
+    padding-left: 70px;
+    width: 33%;
+    @media (max-width: 1130px) {
+      padding-left: 0;
+      width: 100%;
+    }
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+  &__book-room{
+    margin: 0 auto;
+    max-width: 380px;
+  }
+  &__rules{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  &__cancel{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  &__cancel-title{
+    margin-bottom: 20px;
+  }
+  &__details-room-bottom-part{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+
 
 }

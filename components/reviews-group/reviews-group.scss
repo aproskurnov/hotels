@@ -1,0 +1,13 @@
+@import "../variables/variables";
+
+.review-group{
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    flex-wrap: wrap;
+  }
+  &__amount{
+    color: $dark-50;
+  }
+}

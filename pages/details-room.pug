@@ -1,6 +1,10 @@
 include ../components/header/header
 include ../components/footer/footer
 include ../components/chart/chart
+include ../components/book-room/book-room
+include ../components/properties-group/properties-group
+include ../components/reviews-group/reviews-group
+include ../components/bullet-list/bullet-list
 
 
 doctype html
@@ -12,14 +16,44 @@ html(lang=ru)
     body
         div.layout
             +header({})
-            section.layout__content.layout__content_centered
-                div.layout__page-content
-                    +chart({
-                        title: "Впечатления от номера",
-                        data:[
-                            {votes: 540, title: "Великолепно", color: "#FFE39C"},
-                            {votes: 260, title: "Хорошо", color: "#6FCF97"},
-                            {votes: 260, title: "Удовлетворительно", color: "#BC9CFF"},
-                            {votes: 0, title: "Разочарован", color: "#3D4975"},
-                    ]})
+            div.layout__images
+                img(class="layout__main-image" src=require('../pages/details-image1.png') alt="image1")
+                div.layout__images-small
+                    img(class="" src=require('../pages/details-image2.png') alt="image2")
+                    img(class="" src=require('../pages/details-image3.png') alt="image3")
+            section.layout__content.layout__content_centered.layout__content_details-room
+                div.layout__page-content.layout__page-content_detail-room
+                    div.layout__details-room-inner
+                        div.layout__details-room-main-part
+                            div.layout__details-room-properties
+                                +properties-group({})
+                            div.layout__details-room-chart
+                                +chart({
+                                    title: "Впечатления от номера",
+                                    data:[
+                                        {votes: 540, title: "Великолепно", color: "#FFE39C"},
+                                        {votes: 260, title: "Хорошо", color: "#6FCF97"},
+                                        {votes: 260, title: "Удовлетворительно", color: "#BC9CFF"},
+                                        {votes: 0, title: "Разочарован", color: "#3D4975"},
+                                ]})
+                        div.layout__details-room-reviews-part
+                            +reviews-group({title: 'Отзывы посетителей номера'})
+                        div.layout__details-room-bottom-part
+                            div.layout__rules
+                                +bullet-list({
+                                    title: 'Правила',
+                                    data: [
+                                        {text:'Нельзя с питомцами'},
+                                        {text:'Без вечеринок и мероприятий'},
+                                        {text:'Время прибытия — после 13:00, а выезд до 12:00'},
+                                    ]
+                                })
+                            div.layout__cancel
+                                div.layout__cancel-title
+                                    h2="Отмена"
+                                div.layout__cancel-text="Бесплатная отмена в течение 48 ч. После этого при отмене не"
+                                     | "позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+                    aside.layout__page-aside
+                        div.layout__book-room
+                            +book-room({})
             +footer({})

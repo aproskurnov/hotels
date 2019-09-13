@@ -1,8 +1,11 @@
 @import "../variables/variables";
 
 .book-room{
-  width: 380px;
+  max-width: 380px;
   padding: 40px 30px 30px 30px;
+  @media (max-width: 380px) {
+    padding: 40px 15px 30px;
+  }
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -62,6 +65,7 @@
     }
   }
   &__property-item-title{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -72,12 +76,19 @@
   &__property-item-title-discont{
     display: flex;
   }
+  &__property-item-title-discont-sum{
+    display: flex;
+    justify-content: flex-end;
+    width: 70px;
+  }
   &__property-item-title-discont-value{
     margin-left: 4px;
   }
   &__property-item-sum{
     display: flex;
     line-height: 23px;
+    width: 80px;
+    justify-content: flex-end;
   }
   &__property-item-title-sign{
     width: 13px;
@@ -91,7 +102,6 @@
   }
   &__property-item-title-services-text{
     line-height: 18px;
-    width: 200px;
   }
   &__property-item-info-sign{
     border: 1px solid $dark-25;
@@ -103,7 +113,7 @@
     text-align: center;
     cursor: pointer;
     position: absolute;
-    right: -16px;
+    right: -20px;
     font-weight: bold;
     &:hover{
       .book-room__info-sign-message{

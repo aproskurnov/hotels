@@ -41,8 +41,9 @@ import '../components/room/room.scss'
 //ui-kit-headers-footers
 import '../components/header/header.scss'
 import '../components/footer/footer.scss'
-//
+//details-room
 import '../components/chart/chart.scss'
+import '../components/reviews-group/reviews-group.scss'
 
 //js
 import '../components/dropdown/dropdown'
