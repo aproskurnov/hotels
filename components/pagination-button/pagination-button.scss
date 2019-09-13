@@ -40,6 +40,14 @@
   }
   &_clickable{
     cursor: pointer;
+    &:hover{
+      background-color: rgba($dark-blue, 0.75);
+      background-image: none;
+      border-radius: 50%;
+      .pagination-button__value{
+        color: $white;
+      }
+    }
   }
 
 }
