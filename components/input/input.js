@@ -2,11 +2,10 @@ import IMask from 'imask';
 import moment from "moment";
 
 const momentFormat = 'DD.MM.YYYY';
-let mFields = document.getElementsByClassName('input_masked');
-for( let f of mFields ){
-
-    let e = f.getElementsByClassName('input__input')[0];
-    let momentMask = IMask(e, {
+let mFields = document.querySelectorAll('.js-input_masked');
+Object.values(mFields).map((v)=>{
+    let e = v.querySelector('.js-input__input');
+    IMask(e, {
         mask: Date,
         pattern: momentFormat,
         lazy: false,
@@ -43,4 +42,4 @@ for( let f of mFields ){
         }
     });
 
-}
+});

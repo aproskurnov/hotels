@@ -4,7 +4,7 @@ mixin input(options)
         var value = options.value?options.value:'';
         var mainClass = "input";
         mainClass += options.focusDemoMode?" input_focus-demo-mode":"";
-        mainClass += options.masked?" input_masked":"";
+        mainClass += options.masked?" input_masked js-input_masked":"";
         mainClass += options.subscription?" input_subscription":"";
     div(class=mainClass)
         if (options.title || options.subtitle)
@@ -15,7 +15,7 @@ mixin input(options)
                     div(class="input__subtitle")
                         h3=options.subtitle
         div.input__content
-            input(class="input__input" placeholder=options.placeholder required=options.required value=options.value type=options.type || 'text' name=options.name )
+            input(class="input__input js-input__input" placeholder=options.placeholder required=options.required value=options.value type=options.type || 'text' name=options.name )
             if (options.subscription)
                 input(class="input__subscription-button" type="submit" value="")
 
