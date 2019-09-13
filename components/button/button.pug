@@ -1,13 +1,15 @@
 mixin button(options)
     -
         options.href = options.href || '/emptylink'
-        var buttonClassName = "button"
+        var buttonClassName = "button js-button"
         buttonClassName += options.theme == 'white' ? " button_theme-white" : ""
         buttonClassName += options.theme == 'light' ? " button_theme-light" : ""
         buttonClassName += options.arrow ? " button_arrow" : ""
         buttonClassName += options.fullwide ? " button_fullwide" : ""
     case options.type
-      when 'link'
-        a(class=buttonClassName href=options.href)=options.title
-      default
-        button(class=buttonClassName type="submit" disabled=options.disabled)=options.title
+        when 'link'
+            -
+                buttonClassName += options.disabled?" button_disabled":"";
+            a(class=buttonClassName href=options.href)=options.title
+        default
+            button(class=buttonClassName type="submit" disabled=options.disabled)=options.title

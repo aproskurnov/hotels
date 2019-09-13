@@ -3,8 +3,8 @@ mixin dropdown-item(options)
         div(class="dropdown-item__title")
             h3=options.title
         div(class="dropdown-item__control")
-            div(class="dropdown-item__minus")
+            div(class="dropdown-item__minus js-dropdown-item__minus")
                 +round-button({text:"-", disabled:true})
-            h3(class="dropdown-item__value")=0
-            div(class="dropdown-item__plus")
+            h3(class="dropdown-item__value js-dropdown-item__value")=0
+            div(class="dropdown-item__plus js-dropdown-item__plus")
                 +round-button({text: "+"})

@@ -1,7 +1,7 @@
 import {pluralize} from '../../src/lib/utils'
 
 document.addEventListener('click', function(e) {
-    elements = document.querySelectorAll('.js-dropdown.dropdown_expanded');
+    let elements = document.querySelectorAll('.js-dropdown.dropdown_expanded');
     Object.values(elements).map(function(v){
         if (!v.contains(e.target)){
             v.classList.remove('dropdown_expanded');
@@ -10,129 +10,127 @@ document.addEventListener('click', function(e) {
 });
 
 var dropdowns = document.querySelectorAll('.js-dropdown_expandable');
-for (let d of dropdowns){
-    let el = d.getElementsByClassName('js-dropdown__select').item(0);
+Object.values(dropdowns).map((v)=>{
+    let el = v.querySelector('.js-dropdown__select');
     el.addEventListener('click', function(e){
         let content = el.querySelector('.js-dropdown__content');
         if(!content.contains(e.target)){
-            d.classList.toggle('dropdown_expanded')
+            v.classList.toggle('dropdown_expanded')
         }
     })
-}
+});
 
 function calcVal(dropdown){
-    let vals = dropdown.getElementsByClassName('dropdown-item__value');
+    let vals = dropdown.querySelectorAll('.js-dropdown-item__value');
     let count = 0;
-    for( var v of vals){
-        count += Number(v.innerHTML);
-    }
+    Object.values(vals).map((v)=>{
+        count += +v.innerHTML;
+    });
     return count;
 }
 
 function recalcBedroom(dropdown){
-    let vals = dropdown.getElementsByClassName('dropdown-item__value');
+    let vals = dropdown.querySelectorAll('.js-dropdown-item__value');
     let c = 1;
     let count = 0;
     let res = "";
-    for( let v of vals){
-        let n = Number(v.innerHTML);
-        count += n;
+    let total = 0;
+    Object.values(vals).map((v)=>{
+        count = +v.innerHTML;
+        total += count;
         switch (c) {
             case 1:
-                res += count + ' ' + pluralize(n, 'спал', 'ьня', 'ьни', 'ен');
+                res += count + ' ' + pluralize(count, 'спал', 'ьня', 'ьни', 'ен');
                 break;
             case 2:
                 res += ', ';
-                res += count + ' ' + pluralize(n, 'кроват', 'ь', 'и', 'ей');
+                res += count + ' ' + pluralize(count, 'кроват', 'ь', 'и', 'ей');
                 break;
             case 3:
                 res += ', ';
-                res += count + ' ' + pluralize(n, 'ванн', 'ая комната', 'ых комнаты', 'ых комнат');
+                res += count + ' ' + pluralize(count, 'ванн', 'ая комната', 'ых комнаты', 'ых комнат');
                 break;
         }
         c++;
-    }
-    if (count > 0){
+    });
+    if (total > 0){
         res = res.substr(0, 20) + '...';
-        dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = res;
+        dropdown.querySelector('.js-dropdown__value').innerHTML = res;
     }else{
-        dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = 'Не задано';
+        dropdown.querySelector('.js-dropdown__value').innerHTML = 'Не задано';
     }
 }
 
 //controls
-let minus = document.getElementsByClassName('dropdown-item__minus');
-for( let el of minus ){
-    el.addEventListener('click', function(e){
+let minuses = document.querySelectorAll('.js-dropdown-item__minus .js-round-button');
+Object.values(minuses).map((v)=>{
+    v.addEventListener('click', function(e){
         e.preventDefault();
-        let btn = this.firstChild;
-        if (!btn.classList.contains('round-button_disabled')){
-            let i = --this.nextSibling.innerHTML;
+        if (!v.classList.contains('round-button_disabled')){
+            let i = --v.parentNode.nextSibling.innerHTML;
             if (i === 0){
-                btn.classList.add('round-button_disabled');
+                v.classList.add('round-button_disabled');
             }
 
-            let dropdown = this.closest('.dropdown');
-            if (dropdown.classList.contains('dropdown_bedroom')){
+            let dropdown = v.closest('.js-dropdown.dropdown_bedroom');
+            if (dropdown){
                 recalcBedroom(dropdown);
             }
         }
 
     })
-}
+});
 
-let plus = document.getElementsByClassName('dropdown-item__plus');
-for( let el of plus ){
-    el.addEventListener('click', function(e){
+let pluses = document.querySelectorAll('.js-dropdown-item__plus .js-round-button');
+Object.values(pluses).map((v)=>{
+    v.addEventListener('click', function(e){
         e.preventDefault();
-        let btn = this.firstChild;
-        if (!btn.classList.contains('round-button_disabled')){
-            let i = ++this.previousSibling.innerHTML;
+        if (!v.classList.contains('round-button_disabled')){
+            let i = ++v.parentNode.previousSibling.innerHTML;
             if (i > 0){
-                this.previousSibling.previousSibling.firstChild.classList.remove('round-button_disabled');
+                v.parentNode.previousSibling.previousSibling.firstChild.classList.remove('round-button_disabled');
             }
 
-            let dropdown = this.closest('.dropdown');
-            if (dropdown.classList.contains('dropdown_bedroom')){
+            let dropdown = this.closest('.dropdown.dropdown_bedroom');
+            if (dropdown){
                 recalcBedroom(dropdown);
             }
         }
-        return false;
     })
-}
+});
 
 //buttons
-let ok = document.getElementsByClassName('dropdown-link_ok');
-for( let el of ok ){
-    el.addEventListener('click', function(e){
+let oks = document.querySelectorAll('.js-dropdown-link_ok .js-button');
+Object.values(oks).map((v)=>{
+    v.addEventListener('click', function(e){
         e.preventDefault();
-        let dropdown = this.closest('.dropdown');
+        let dropdown = this.closest('.js-dropdown');
         let count = calcVal(dropdown);
 
         if (count > 0){
-            dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = count + ' ' + pluralize(count, 'Гост', 'ь','я', 'ей');
-            dropdown.getElementsByClassName('dropdown-link_cancel').item(0).classList.remove('dropdown-link_disabled')
+            dropdown.querySelector('.js-dropdown__value').innerHTML = count + ' ' + pluralize(count, 'Гост', 'ь','я', 'ей');
+            dropdown.querySelector('.js-dropdown-link_cancel').classList.remove('dropdown-link_disabled')
         }
         dropdown.classList.toggle('dropdown_expanded');
     })
-}
+});
 
-let cancel = document.getElementsByClassName('dropdown-link_cancel');
-for( let el of cancel ){
-    el.addEventListener('click', function(e){
+let cancels = document.querySelectorAll('.js-dropdown-link_cancel .js-button');
+Object.values(cancels).map((v)=>{
+    v.addEventListener('click', function(e){
         e.preventDefault();
-        let dropdown = this.closest('.dropdown');
-        let vals = dropdown.getElementsByClassName('dropdown-item__value');
+        let dropdown = this.closest('.js-dropdown');
+        let vals = dropdown.querySelectorAll('.js-dropdown-item__value');
         for( let v of vals){
             v.innerHTML = 0;
         }
-        vals = dropdown.getElementsByClassName('dropdown-item__minus');
+        vals = dropdown.querySelectorAll('.js-dropdown-item__minus');
         for( let v of vals){
             v.firstChild.classList.add('round-button_disabled');
         }
 
-        dropdown.getElementsByClassName('dropdown__value').item(0).innerHTML = "Сколько гостей";
-        this.classList.add('dropdown-link_disabled');
+        dropdown.querySelector('.js-dropdown__value').innerHTML = "Сколько гостей";
+        this.parentElement.classList.add('dropdown-link_disabled');
 
     })
-}
+});

@@ -38,8 +38,9 @@
     background: #ffffff;
     color: $purple;
     padding: 0;
-    &:disabled{
-      color: $dark-50;
+    &:hover{
+      background-color: transparent;
+      color: $dark-blue;
     }
   }
   &_arrow{
@@ -58,6 +59,9 @@
   }
   &_fullwide{
     width: 100%;
+  }
+  &_disabled{
+    color: $dark-50;
   }
 
 }

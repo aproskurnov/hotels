@@ -15,7 +15,7 @@ mixin dropdown(options)
                     h3=options.subtitle
         div(class="dropdown__select js-dropdown__select")
             div.dropdown__border
-                div(class="dropdown__value")=options.defaultText
+                div(class="dropdown__value js-dropdown__value")=options.defaultText
                 if options.type == "bedroom"
                     div(class="dropdown__content js-dropdown__content")
                         +dropdown-item({title:'спальни'})
@@ -28,6 +28,8 @@ mixin dropdown(options)
                         +dropdown-item({title:'младенцы'})
                         div(class="dropdown__actions")
                             h3
-                                a(class="dropdown-link dropdown-link_cancel dropdown-link_disabled" href="/emptylink")="очистить"
+                                div.dropdown-link.js-dropdown-link_cancel.dropdown-link_disabled
+                                    +button({title: "очистить", theme: "light", disabled: true, type: "link"})
                             h3
-                                a(class="dropdown-link dropdown-link_ok" href="/emptylink")="применить"
+                                div.dropdown-link.js-dropdown-link_ok
+                                    +button({title: "применить", theme: "light", type: "link"})
