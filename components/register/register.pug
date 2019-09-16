@@ -7,9 +7,9 @@ mixin register(options)
         h1.register__title='Регистрация аккаунта'
         form.register__form
             div.register__field
-                +input({placeholder:'Имя'})
+                +input({placeholder:'Имя', required: true})
             div.register__field
-                +input({placeholder:'Фамилия'})
+                +input({placeholder:'Фамилия', required: true})
             div.register__sex
                 +radio-buttons({
                     data: [
@@ -18,12 +18,12 @@ mixin register(options)
                     ]
                 })
             div.register__birthdate
-                +input({title:'Дата рождения', type:'masked'})
+                +input({title:'Дата рождения', type:'masked', required: true})
             div.register__enter-data
                 div.register__field
-                    +input({placeholder:'Email', type:'email', title:'Данные для входа в сервис'})
+                    +input({placeholder:'Email', type:'email', title:'Данные для входа в сервис', required: true})
                 div.register__field
-                    +input({placeholder:'Пароль', type:'password'})
+                    +input({placeholder:'Пароль', type:'password', required: true})
             div.register__subscribe
                 +toggle({
                      name: 'subscribe',
