@@ -15,14 +15,14 @@
   }
   &__title{
     display: flex;
-    font-size: 20px;
+    font-size: 1.67rem;
     font-weight: bold;
     line-height: 21px;
     color: $dark-100;
   }
   &__sign{
     font-family: $quicksand;
-    font-size: 14px;
+    font-size: 1.17rem;
     margin-right: 3px;
   }
   &__num{
@@ -41,7 +41,7 @@
     line-height: 19px;
   }
   &__perday{
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: normal;
     margin-left: 3px;
   }

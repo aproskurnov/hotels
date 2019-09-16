@@ -9,7 +9,8 @@ mixin footer(optoins)
                         img(class="footer__logo" src=require('../components/footer/logo.svg') alt="logo")
                         p.footer__text="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
                     div.footer__column
-                        div.footer__title-elements="Навигация"
+                        div.footer__title-elements
+                            h3="Навигация"
                         div.footer__element
                             a(href="/about")="О нас"
                         div.footer__element
@@ -19,7 +20,8 @@ mixin footer(optoins)
                         div.footer__element
                             a(href="/products")="Услуги"
                     div.footer__column
-                        div.footer__title-elements="О нас"
+                        div.footer__title-elements
+                            h3="О нас"
                         div.footer__element
                             a(href="/whoweare")="О сервисе"
                         div.footer__element
@@ -29,7 +31,8 @@ mixin footer(optoins)
                         div.footer__element
                             a(href="/investors")="Инвесторы"
                     div.footer__column
-                        div.footer__title-elements="Служба поддержки"
+                        div.footer__title-elements
+                            h3="Служба поддержки"
                         div.footer__element
                             a(href="/documentation")="Соглашения"
                         div.footer__element
@@ -37,7 +40,8 @@ mixin footer(optoins)
                         div.footer__element
                             a(href="/getintouch")="Связь с нами"
                     div.footer__column
-                        div.footer__title-elements="Подписка"
+                        div.footer__title-elements
+                            h3="Подписка"
                         p.footer__text="Получайте специальные предложения и новости сервиса"
                         div.footer__element
                             form

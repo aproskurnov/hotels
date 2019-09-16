@@ -22,13 +22,13 @@
     font-family: $quicksand;
   }
   &__num{
-    font-size: 24px;
+    font-size: 2rem;
     line-height: 12px;
     font-family: $quicksand;
   }
   &__text{
     color: $purple;
-    font-size: 12px;
+    font-size: 1rem;
     margin-left: 5px;
     text-transform: uppercase;
   }
@@ -38,14 +38,14 @@
   }
   &__price-info{
     display: flex;
-    font-size: 14px;
+    font-size: 1.17rem;
     font-weight: bold;
     line-height: 19px;
     color: $dark-50;
   }
   &__price-text{
     font-weight: normal;
-    font-size: 12px;
+    font-size: 1rem;
     margin-left: 4px;
   }
   &__guest{
@@ -133,7 +133,7 @@
     color: $dark-100;
     display: flex;
     justify-content: space-between;
-    font-size: 19px;
+    font-size: 1.6rem;
     line-height: 24px;
     font-weight: bold;
   }

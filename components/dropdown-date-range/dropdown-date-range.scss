@@ -13,7 +13,7 @@
 
 div.flatpickr-calendar{
   width: 318px;
-  font-size: 12px;
+  font-size: 1rem;
   padding-top: 12px;
 
   .flatpickr-months{
@@ -27,12 +27,12 @@ div.flatpickr-calendar{
         .flatpickr-monthDropdown-months{
           font-weight: bold;
           font-family: "Quicksand", "Arial", sans-serif;
-          font-size: 19px;
+          font-size: 1.6rem;
         }
         .cur-year{
           font-weight: bold;
           font-family: "Quicksand", "Arial", sans-serif;
-          font-size: 19px;
+          font-size: 1.6rem;
         }
         .numInputWrapper:hover{
           background: none;
