@@ -1,10 +1,11 @@
 mixin input(options)
     -
+        options.type = options.type || "text"
         var placeholder = options.placeholder?options.placeholder:''
         var value = options.value?options.value:'';
         var mainClass = "input";
         mainClass += options.focusDemoMode?" input_focus-demo-mode":"";
-        mainClass += options.masked?" input_masked js-input_masked":"";
+        mainClass += options.type==="masked"?" input_masked js-input_masked":"";
         mainClass += options.subscription?" input_subscription":"";
     div(class=mainClass)
         if (options.title || options.subtitle)
